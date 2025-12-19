@@ -8,11 +8,11 @@
 
 #include "lib.h"
 
-void my_swap(int *a, int *b)
+void my_swap(void *a, void *b, size_t size)
 {
-    int c;
+    char tmp[size];
 
-    c = *a;
-    *a = *b;
-    *b = c;
+    my_memcpy(tmp, a, size);
+    my_memcpy(a, b, size);
+    my_memcpy(b, tmp, size);
 }

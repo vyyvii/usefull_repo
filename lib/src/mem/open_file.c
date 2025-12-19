@@ -3,6 +3,7 @@
 ** G-CPE-110-LYN-1-1-organized-27
 ** File description:
 ** open_file
+** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (open, read, close)
 */
 
 #include "lib.h"

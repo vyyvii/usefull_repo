@@ -9,9 +9,15 @@
 
 char *strslice(char *str, int from, int to)
 {
-    char *out = smalloc(strlen(str) + 1);
+    char *out;
+    int len_str = my_strlen(str);
     int j = 0;
 
+    from = (from < 0) ? 0 : from;
+    to = (to > len_str) ? len_str : to;
+    if (from >= to)
+        return smalloc(1);
+    out = smalloc((to - from) + 1);
     for (int i = from; i < to; i++) {
         out[j] = str[i];
         j++;

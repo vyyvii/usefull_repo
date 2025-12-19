@@ -14,12 +14,12 @@
     #include <unistd.h>
     #include <fcntl.h>
     #include <string.h>
+    #include <limits.h>
     #include <sys/types.h>
     #include <sys/stat.h>
 
 // int
     int my_compute_power_rec(int nb, int p);
-    int my_compute_square_root(int nb);
     int my_find_prime_sup(int nb);
     int my_is_prime(int nb);
     int my_isneg(int n);
@@ -63,10 +63,10 @@
     int count_lines(char *str);
 
 // mem
-    void my_swap(int *a, int *b);
+    void my_swap(void *a, void *b, size_t size);
     char *open_file(char *file);
     void *smalloc(ssize_t size);
-    void free_table(int **table, int size);
-    void free_dtable(double **table, int size);
+    void free_table(void **table, size_t size);
+    void *my_memcpy(void *dest, const void *src, size_t n);
 
 #endif /*   libmy */

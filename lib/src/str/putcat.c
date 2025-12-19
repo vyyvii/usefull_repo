@@ -11,7 +11,7 @@ void putcat(char *txt1, char *txt2)
 {
     char *cat;
 
-    cat = strcat(txt1, txt2);
-    printf("%s", cat);
+    cat = my_strcat(txt1, txt2);
+    my_putstr(cat);
     free(cat);
 }

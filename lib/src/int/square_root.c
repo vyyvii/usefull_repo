@@ -5,6 +5,8 @@
 ** square_root
 */
 
+#include "lib.h"
+
 int square_root(int nb)
 {
     if (nb <= 0)

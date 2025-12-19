@@ -7,64 +7,34 @@
 
 #include "lib.h"
 
-static int verif_integer(char const *str, int i, int pos)
+static int go_in_number(long *result, const char *str, int i, int sign)
 {
-    if (pos == 1) {
-        if (str[i] > '7' || str[i + 1] != '\0')
-            return 0;
-        return 1;
-    }
-    if (pos == -1) {
-        if (str[i] > '8' || str[i + 1] != '\0')
-            return 0;
-        return 1;
-    }
-    return 0;
-}
-
-static int while_out(char const *str, int out, int i, int pos)
-{
-    int overflow_number = 1;
-
     while (str[i] >= '0' && str[i] <= '9') {
-        if (out >= 214748364)
-            overflow_number = verif_integer(str, i, pos);
-        if (overflow_number == 0)
-            return 0;
-        out = out * 10;
-        out = (out + (str[i] - 48));
+        *result = *result * 10 + (str[i] - '0');
         i++;
+        if (sign == 1 && *result > INT_MAX)
+            return 0;
+        if (sign == -1 && *result > (long)INT_MAX + 1)
+            return 0;
     }
-    if (pos == -1)
-        return out * -1;
-    return out;
+    return 1;
 }
 
-static int pos_verif(char const *str, int *i)
-{
-    int sign = 1;
-
-    while (str[*i] == ' ' || str[*i] == '+' || str[*i] == '-') {
-        if (str[*i] == '-')
-            sign = -sign;
-        (*i)++;
-    }
-    if (str[*i] >= '0' && str[*i] <= '9')
-        return sign;
-    return 0;
-}
-
-int my_getnbr(char const *str)
+int my_getnbr(const char *str)
 {
     int i = 0;
-    int out = 0;
-    int pos;
+    int sign = 1;
+    long result = 0;
 
-    while (str[i] != '\0') {
-        pos = pos_verif(str, &i);
-        if (pos == 1 || pos == -1)
-            return while_out(str, out, i, pos);
+    while (str[i] == ' ' || str[i] == '\t')
+        i++;
+
+    if (str[i] == '+' || str[i] == '-') {
+        if (str[i] == '-')
+            sign = -1;
         i++;
     }
-    return 0;
+    if (!go_in_number(&result, str, i, sign))
+        return 0;
+    return (int)(result * sign);
 }

@@ -3,6 +3,7 @@
 ** verif_int
 ** File description:
 ** Verifie if the argument is an integer or not
+** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (atoi)
 */
 
 #include "lib.h"
@@ -20,6 +21,6 @@ int verif_int(char *number, int *result)
         if ((number[i] < 48 || number[i] > 57))
             return 84;
     }
-    *result = atoi(number);
+    *result = my_getnbr(number);
     return 0;
 }

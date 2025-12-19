@@ -13,13 +13,13 @@ char **str_to_matrice(char *str, int nb_lines)
     int row = 0;
     int start = 0;
 
-    for (size_t i = 0; i < strlen(str); i++) {
+    for (size_t i = 0; i < (size_t)my_strlen(str); i++) {
         if (str[i] == '\n') {
             out[row] = strslice(str, start, i);
-            out[row][i - start] = '\0';
             row++;
             start = i + 1;
         }
     }
+    out[row] = NULL;
     return out;
 }

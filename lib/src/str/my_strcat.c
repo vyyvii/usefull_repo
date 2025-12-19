@@ -9,13 +9,17 @@
 
 char *my_strcat(char *dest, char const *src)
 {
-    int dest_len = my_strlen(dest);
+    int len1 = my_strlen(dest);
+    int len2 = my_strlen(src);
+    char *res = malloc(len1 + len2 + 1);
     int i = 0;
 
-    while (src[i] != '\0') {
-        dest[dest_len + i] = src[i];
-        i++;
-    }
-    dest[dest_len + i] = '\0';
-    return dest;
+    if (!res)
+        return NULL;
+    for (i = 0; i < len1; i++)
+        res[i] = dest[i];
+    for (i = 0; i < len2; i++)
+        res[len1 + i] = src[i];
+    res[len1 + len2] = '\0';
+    return res;
 }
