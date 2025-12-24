@@ -43,7 +43,7 @@ int my_str_isnum(char const *str);
 int my_str_isprintable(char const *str);
 int my_str_isupper(char const *str);
 char *my_strcapitalize(char *str);
-char *my_strcat(char *dest, char const *src);
+char *my_strjoin(char *dest, char const *src);
 char *my_strncat(char *dest, char const *src, int nb);
 int my_strcmp(char const *s1, char const *s2);
 int my_strncmp(char const *s1, char const *s2, int n);

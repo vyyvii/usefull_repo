@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2025
-** my_strcat
+** my_strjoin
 ** File description:
 ** Concatenate a string src with an other one, dest. Return dest
 */
 
 #include "lib.h"
 
-char *my_strcat(char *dest, char const *src)
+char *my_strjoin(char *dest, char const *src)
 {
     int len1 = my_strlen(dest);
     int len2 = my_strlen(src);
