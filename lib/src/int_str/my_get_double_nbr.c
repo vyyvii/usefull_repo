@@ -7,24 +7,30 @@
 
 #include "lib.h"
 
-static int go_in_number(long *result, const char *str, int i, int sign)
+static int go_in_number(double *result, const char *str, int i)
 {
+    double factor = 0.1;
+
     while (str[i] >= '0' && str[i] <= '9') {
         *result = *result * 10 + (str[i] - '0');
         i++;
-        if (sign == 1 && *result > INT_MAX)
-            return 0;
-        if (sign == -1 && *result > (long)INT_MAX + 1)
-            return 0;
+    }
+    if (str[i] == '.') {
+        i++;
+        while (str[i] >= '0' && str[i] <= '9') {
+            *result += (str[i] - '0') * factor;
+            factor *= 0.1;
+            i++;
+        }
     }
     return 1;
 }
 
-int my_getnbr(const char *str)
+double my_get_double_nbr(const char *str)
 {
     int i = 0;
     int sign = 1;
-    long result = 0;
+    double result = 0.0;
 
     while (str[i] == ' ' || str[i] == '\t')
         i++;
@@ -33,7 +39,7 @@ int my_getnbr(const char *str)
             sign = -1;
         i++;
     }
-    if (!go_in_number(&result, str, i, sign))
+    if (!go_in_number(&result, str, i))
         return 0;
-    return (int)(result * sign);
+    return result * sign;
 }

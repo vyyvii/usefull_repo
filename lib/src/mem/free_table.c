@@ -7,12 +7,13 @@
 
 #include "lib.h"
 
-void free_table(void **table, size_t size)
+void free_table(void **table)
 {
-    for (size_t i = 0; i < size; i++) {
+    if (!table)
+        return;
+    for (size_t i = 0; table[i] != NULL; i++) {
         free(table[i]);
         table[i] = NULL;
     }
     free(table);
-    table = NULL;
 }

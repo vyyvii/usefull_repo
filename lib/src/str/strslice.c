@@ -16,8 +16,10 @@ char *strslice(char *str, int from, int to)
     from = (from < 0) ? 0 : from;
     to = (to > len_str) ? len_str : to;
     if (from >= to)
-        return smalloc(1);
-    out = smalloc((to - from) + 1);
+        return NULL;
+    out = malloc((to - from) + 1);
+    if (!out)
+        return NULL;
     for (int i = from; i < to; i++) {
         out[j] = str[i];
         j++;

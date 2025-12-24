@@ -12,12 +12,11 @@
 char *open_file(char *file)
 {
     int fd = open(file, O_RDONLY);
-    char *buffer;
+    char *buffer = malloc(MAX_BUFFER);
     int size;
 
-    if (fd == -1)
+    if (fd == -1 || !buffer)
         return NULL;
-    buffer = smalloc(MAX_BUFFER);
     size = read(fd, buffer, MAX_BUFFER - 1);
     if (size < 0) {
         free(buffer);
