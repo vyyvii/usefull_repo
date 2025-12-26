@@ -7,7 +7,6 @@
 
 #ifndef LIBMY
     #define LIBMY
-    #define MAX_BUFFER 16084
     #include <stddef.h>
     #include <stdio.h>
     #include <stdlib.h>
