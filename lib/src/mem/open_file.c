@@ -30,7 +30,7 @@ static int file_runner(int fd, size_t *tot, char **buffer)
     char c;
 
     size = read(fd, &c, 1);
-    while (size == 1 && tot >= 0) {
+    while (size == 1) {
         if (buffer_realoc(tot, len, buffer) == 84)
             return 84;
         (*buffer)[len] = c;
@@ -49,8 +49,12 @@ char *open_file(char *file)
     size_t tot = 8;
     char *buffer = malloc(tot);
 
-    if (fd == -1 || !buffer)
+    if (!buffer)
         return NULL;
+    if (fd == -1) {
+        free(buffer);
+        return NULL;
+    }
     if (file_runner(fd, &tot, &buffer) == 84) {
         free(buffer);
         close(fd);

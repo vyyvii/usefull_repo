@@ -31,6 +31,7 @@ int square_root(int nb);
 int my_getnbr(char const *str);
 double my_get_double_nbr(const char *str);
 int my_putnbr(int nb);
+int my_isdigit(char c);
 
 // str
 void my_putchar(char c);
