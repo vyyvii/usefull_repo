@@ -5,7 +5,7 @@
 ** Write a function that returns a number, sent to the function as a string.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_isdigit(char c)
 {

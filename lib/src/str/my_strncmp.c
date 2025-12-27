@@ -5,7 +5,7 @@
 ** Reproduce the behavior of the strncmp function.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_strncmp(char const *s1, char const *s2, int n)
 {

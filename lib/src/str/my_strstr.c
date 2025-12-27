@@ -6,7 +6,7 @@
 */
 
 #include <stddef.h>
-#include "lib.h"
+#include "utilslib.h"
 
 char *my_strstr(char *str, char const *to_find)
 {

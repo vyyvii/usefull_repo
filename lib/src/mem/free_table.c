@@ -5,7 +5,7 @@
 ** free_table
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 void free_table(void **table)
 {

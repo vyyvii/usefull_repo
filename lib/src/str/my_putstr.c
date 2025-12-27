@@ -7,7 +7,7 @@
 ** in the pointer passed as a parameter to the function.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_putstr(char const *str)
 {

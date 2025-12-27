@@ -7,7 +7,7 @@
 ** memory to copy the source string.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 char *my_strcpy(char *dest, char const *src)
 {

@@ -5,7 +5,7 @@
 ** Write a function that returns a number, sent to the function as a string.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 static int go_in_number(long *result, const char *str, int i, int sign)
 {

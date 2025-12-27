@@ -5,7 +5,7 @@
 ** square_root
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int square_root(int nb)
 {

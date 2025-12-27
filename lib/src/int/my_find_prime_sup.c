@@ -6,7 +6,7 @@
 ** that is greater than, or equal to, the number given as a parameter.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_find_prime_sup(int nb)
 {

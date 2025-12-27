@@ -6,7 +6,7 @@
 ** of every word in it in lowercase.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 char *my_strlowcase(char *str)
 {

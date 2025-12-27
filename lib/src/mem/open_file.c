@@ -6,7 +6,7 @@
 ** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (open, read, close)
 */
 
-#include "lib.h"
+#include "utilslib.h"
 #include <fcntl.h>
 
 static int buffer_realoc(size_t *tot, size_t len, char **buffer)

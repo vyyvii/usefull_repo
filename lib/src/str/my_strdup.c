@@ -5,7 +5,7 @@
 ** Reallocate with a new adress the argument
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 char *my_strdup(char const *str)
 {

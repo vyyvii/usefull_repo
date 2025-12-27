@@ -1,6 +1,6 @@
 cd lib
 make fclean && make re && make clean
-cp libmy.a ../Start/libmy.a
-cp include/lib.h ../Start/include/lib.h
+cp libUtilsLib.a ../Start/libUtilsLib.a
+cp include/utilslib.h ../Start/include/utilslib.h
 make fclean
-cd ../
+cd ..//

@@ -1,8 +1,8 @@
 ##
 ## EPITECH PROJECT, 2025
-## Makefile libmy
+## Makefile UtilsLib
 ## File description:
-## Makefile libmy
+## Makefile UtilsLib
 ##
 
 .PHONY: all clean fclean re
@@ -14,7 +14,7 @@ CC = epiclang
 CFLAGS = -Wall -Wextra -g3 -Iinclude
 LDFLAGS =
 
-NAME = libmy.a
+NAME = libUtilsLib.a
 REMOVE = rm -f -r
 
 all: $(NAME)

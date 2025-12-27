@@ -7,7 +7,7 @@
 ** including the last one.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 #include <stdlib.h>
 
 int my_show_word_array(char *const *tab)

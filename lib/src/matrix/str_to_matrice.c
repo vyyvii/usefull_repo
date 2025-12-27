@@ -5,7 +5,7 @@
 ** str_to_matrice
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 char **str_to_matrice(char *str, int nb_lines)
 {

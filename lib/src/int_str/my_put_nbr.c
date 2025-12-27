@@ -6,7 +6,7 @@
 ** It must be able to display all the possible values of an int.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_put_nbr(int nb)
 {

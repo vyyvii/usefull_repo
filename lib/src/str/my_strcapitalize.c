@@ -5,7 +5,7 @@
 ** Write a function that capitalizes the first letter of each word.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 static int ltr(char c)
 {

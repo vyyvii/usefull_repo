@@ -5,7 +5,7 @@
 ** Put s1 > s2 > s3
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 char *my_strjoin_three(char const *s1, char const *s2, char const *s3)
 {

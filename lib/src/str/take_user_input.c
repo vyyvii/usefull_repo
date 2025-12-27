@@ -6,7 +6,7 @@
 ** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (getline, strcspn)
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int take_user_input(char **input)
 {

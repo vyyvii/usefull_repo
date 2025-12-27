@@ -5,7 +5,7 @@
 ** Write on the stdout or stderr the text1 & text2 with a free
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 void putcat(char *txt1, char *txt2)
 {

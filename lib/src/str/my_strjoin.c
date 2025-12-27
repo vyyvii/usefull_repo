@@ -5,7 +5,7 @@
 ** Put s1 > s2
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 char *my_strjoin(char const *s1, char const *s2)
 {

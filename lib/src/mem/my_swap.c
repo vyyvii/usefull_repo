@@ -6,7 +6,7 @@
 ** whose addresses are given as a parameter.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 void my_swap(void *a, void *b, size_t size)
 {

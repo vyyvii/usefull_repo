@@ -5,7 +5,7 @@
 ** count_lines
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int count_lines(char *str)
 {

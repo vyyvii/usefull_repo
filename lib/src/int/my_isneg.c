@@ -5,7 +5,7 @@
 ** Write a function that return 1 if negative, 0 if positive.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_isneg(int n)
 {

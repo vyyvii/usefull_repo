@@ -6,7 +6,7 @@
 ** given a pointer to the first element of the array and its size.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 void my_sort_int_array(int *array, int size)
 {

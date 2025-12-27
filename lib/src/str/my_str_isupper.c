@@ -7,7 +7,7 @@
 ** 0 if the string contains another type of character.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_str_isupper(char const *str)
 {

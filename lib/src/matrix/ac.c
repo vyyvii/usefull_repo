@@ -5,7 +5,7 @@
 ** Return the number of arguments (like ac for **av)
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int nb_args(char **args)
 {

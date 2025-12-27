@@ -6,7 +6,7 @@
 ** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (atoi)
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int verif_int(char *number, int *result)
 {

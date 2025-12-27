@@ -7,7 +7,7 @@
 
 #ifndef TEST_H
     #define TEST_H
-    #include "lib.h"
+    #include "my.h"
     #include <criterion/criterion.h>
     #include <criterion/redirect.h>
 

@@ -5,7 +5,7 @@
 ** Print a char
 */
 
-#include "lib.h"
+#include "utilslib.h"
 #include <unistd.h>
 
 void my_putchar(char c)

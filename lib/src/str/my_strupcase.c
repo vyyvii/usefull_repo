@@ -6,7 +6,7 @@
 ** of every word in it in uppercase.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 char *my_strupcase(char *str)
 {

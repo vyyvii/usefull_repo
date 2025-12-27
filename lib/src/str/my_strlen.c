@@ -6,7 +6,7 @@
 ** of characters found in the string passed as parameter.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_strlen(char const *str)
 {

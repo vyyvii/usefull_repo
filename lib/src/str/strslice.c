@@ -5,7 +5,7 @@
 ** strslice
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 char *strslice(char *str, int from, int to)
 {

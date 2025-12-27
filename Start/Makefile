@@ -18,7 +18,7 @@ OBJ_TEST = $(SRC_TEST:.c=.o)
 
 CC = epiclang
 CFLAGS = -Wall -Wextra -g3 -Iinclude
-LDFLAGS = -L./ -lmy
+LDFLAGS = -L./ -lUtilsLib
 TEST_FLAGS = --coverage
 TEST_LIBS  = -lcriterion
 

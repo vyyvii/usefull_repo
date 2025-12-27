@@ -5,7 +5,7 @@
 ** Write a function that returns 1 if the number is prime and 0 if not.
 */
 
-#include "lib.h"
+#include "utilslib.h"
 
 int my_is_prime(int nb)
 {
