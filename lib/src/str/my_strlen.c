@@ -1,9 +1,8 @@
 /*
 ** EPITECH PROJECT, 2025
-** my_srtlen
+** my_strlen
 ** File description:
-** Write a function that counts and returns the number
-** of characters found in the string passed as parameter.
+** Count the number of characters in a null-terminated string.
 */
 
 #include "utilslib.h"

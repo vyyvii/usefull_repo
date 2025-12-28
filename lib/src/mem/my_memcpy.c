@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_memcpy
 ** File description:
-** my_memcpy
+** Copy a memory block of the given size from src to dest.
 */
 
 #include "utilslib.h"

@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_getnbr
 ** File description:
-** Write a function that returns a number, sent to the function as a string.
+** Return 1 if the character is a decimal digit, otherwise 0.
 */
 
 #include "utilslib.h"

@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strjoin
 ** File description:
-** Put s1 > s2
+** Allocate and return the concatenation of two strings.
 */
 
 #include "utilslib.h"

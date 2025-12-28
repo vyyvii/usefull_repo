@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** G-CPE-110-LYN-1-1-organized-27
 ** File description:
-** count_lines
+** Count the number of newline-separated lines in a string.
 */
 
 #include "utilslib.h"

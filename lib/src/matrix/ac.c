@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** ac
 ** File description:
-** Return the number of arguments (like ac for **av)
+** Count the number of arguments in a NULL-terminated array.
 */
 
 #include "utilslib.h"

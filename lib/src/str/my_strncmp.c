@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strncmp
 ** File description:
-** Reproduce the behavior of the strncmp function.
+** Compare two strings up to n characters (strncmp behavior).
 */
 
 #include "utilslib.h"

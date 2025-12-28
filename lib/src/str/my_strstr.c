@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strstr
 ** File description:
-** Reproduce the behavior of the strstr function.
+** Locate a substring within a string (strstr behavior).
 */
 
 #include <stddef.h>

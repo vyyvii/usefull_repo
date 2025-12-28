@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** G-CPE-110-LYN-1-1-organized-27
 ** File description:
-** open_file
+** Read an entire file into a newly allocated buffer (open/read/close).
 ** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (open, read, close)
 */
 

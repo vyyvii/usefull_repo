@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** square_root
 ** File description:
-** square_root
+** Return the perfect square root of nb, or 0 if nb is not a perfect square.
 */
 
 #include "utilslib.h"

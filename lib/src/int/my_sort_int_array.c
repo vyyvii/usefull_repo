@@ -2,8 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_sort_int_array
 ** File description:
-** Write a function that sorts an integer array in ascending order,
-** given a pointer to the first element of the array and its size.
+** Sort an integer array in ascending order (in-place insertion sort).
 */
 
 #include "utilslib.h"

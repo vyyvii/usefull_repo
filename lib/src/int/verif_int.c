@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** verif_int
 ** File description:
-** Verifie if the argument is an integer or not
+** Validate that the string is an integer representation and convert it.
 ** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (atoi)
 */
 

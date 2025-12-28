@@ -2,9 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strcpy
 ** File description:
-** Write a function that copies a string into another.
-** The destination string will already have enough
-** memory to copy the source string.
+** Copy a null-terminated source string into the destination buffer.
 */
 
 #include "utilslib.h"

@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_putchar
 ** File description:
-** Print a char
+** Write a single character to standard output.
 */
 
 #include "utilslib.h"

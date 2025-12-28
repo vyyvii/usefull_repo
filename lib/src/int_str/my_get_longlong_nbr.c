@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2025
-** my_getnbr
+** my_get_longlong_nbr
 ** File description:
-** Parse an int from a string with basic overflow guard.
+** Parse a long long value from a string with basic overflow guard.
 */
 
 #include "utilslib.h"
 
-static int go_in_number(long *result, const char *str, int i, int sign)
+static int go_in_number(long long *result, const char *str, int i, int sign)
 {
     while (str[i] >= '0' && str[i] <= '9') {
         *result = *result * 10 + (str[i] - '0');
@@ -20,11 +20,11 @@ static int go_in_number(long *result, const char *str, int i, int sign)
     return 1;
 }
 
-int my_getnbr(const char *str)
+long long my_get_longlong_nbr(char const *str)
 {
     int i = 0;
     int sign = 1;
-    long result = 0;
+    long long result = 0;
 
     while (str[i] == ' ' || str[i] == '\t')
         i++;
@@ -37,5 +37,5 @@ int my_getnbr(const char *str)
         return 0;
     if (!go_in_number(&result, str, i, sign))
         return 0;
-    return (int)(result * sign);
+    return (long long)(result * sign);
 }

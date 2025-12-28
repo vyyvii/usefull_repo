@@ -2,8 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strlowcase
 ** File description:
-** Write a function that puts every letter
-** of every word in it in lowercase.
+** Convert all letters of the string to lowercase in place.
 */
 
 #include "utilslib.h"

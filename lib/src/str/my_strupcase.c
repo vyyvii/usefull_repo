@@ -2,8 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strupcase
 ** File description:
-** Write a function that puts every letter
-** of every word in it in uppercase.
+** Convert all letters of the string to uppercase in place.
 */
 
 #include "utilslib.h"

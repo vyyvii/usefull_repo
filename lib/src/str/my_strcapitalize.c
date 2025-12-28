@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strcapitalize
 ** File description:
-** Write a function that capitalizes the first letter of each word.
+** Capitalize the first letter of each word in the string.
 */
 
 #include "utilslib.h"

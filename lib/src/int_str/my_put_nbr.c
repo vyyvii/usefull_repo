@@ -2,20 +2,21 @@
 ** EPITECH PROJECT, 2025
 ** my_put_nbr.c
 ** File description:
-** Write a function that displays the number given as a parameter.
-** It must be able to display all the possible values of an int.
+** Display an integer on stdout, handling the full int range.
 */
 
 #include "utilslib.h"
 
 int my_put_nbr(int nb)
 {
-    if (nb < 0) {
+    long value = nb;
+
+    if (value < 0) {
         my_putchar('-');
-        nb = -nb;
+        value = -value;
     }
-    if (nb >= 10)
-        my_put_nbr(nb / 10);
-    my_putchar((nb % 10) + '0');
-    return (0);
+    if (value >= 10)
+        my_put_nbr((int)(value / 10));
+    my_putchar((char)((value % 10) + '0'));
+    return 0;
 }

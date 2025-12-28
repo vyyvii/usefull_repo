@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2025
-** my_getnbr
+** my_get_double_nbr
 ** File description:
-** Write a function that returns a number, sent to the function as a string.
+** Parse a double value from a string (optional sign and decimal part).
 */
 
 #include "utilslib.h"
@@ -26,7 +26,7 @@ static int go_in_number(double *result, const char *str, int i)
     return 1;
 }
 
-double my_get_double_nbr(const char *str)
+double my_get_double_nbr(char const *str)
 {
     int i = 0;
     int sign = 1;
@@ -39,6 +39,8 @@ double my_get_double_nbr(const char *str)
             sign = -1;
         i++;
     }
+    if (str[i] < '0' || str[i] > '9')
+        return 0;
     if (!go_in_number(&result, str, i))
         return 0;
     return result * sign;

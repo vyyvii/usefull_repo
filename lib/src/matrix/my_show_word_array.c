@@ -2,9 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_show_word_array
 ** File description:
-** Write a function that displays the content of an array of words.
-** There must be one word per line, and each word must end with '\n',
-** including the last one.
+** Print each string of a NULL-terminated array on its own line.
 */
 
 #include "utilslib.h"

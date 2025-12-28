@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strdup
 ** File description:
-** Reallocate with a new adress the argument
+** Duplicate a string into a newly allocated buffer.
 */
 
 #include "utilslib.h"

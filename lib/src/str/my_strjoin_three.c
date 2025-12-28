@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strjoin_three
 ** File description:
-** Put s1 > s2 > s3
+** Allocate and return the concatenation of three strings.
 */
 
 #include "utilslib.h"

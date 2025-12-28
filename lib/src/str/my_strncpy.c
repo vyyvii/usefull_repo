@@ -2,18 +2,18 @@
 ** EPITECH PROJECT, 2025
 ** my_strcpy
 ** File description:
-** Write a function that copies n chars of a string into another.
-** The destination string will already have enough
-** memory to copy the source string.
+** Copy up to n characters from src into dest and null-terminate.
 */
 
 #include "utilslib.h"
 
-char *my_strncpy(char *dest, char const *src, int n)
+char *my_strncpy(char *dest, char const *src, size_t size)
 {
-    int i = 0;
+    size_t i = 0;
 
-    while (i < n && src[i] != '\0') {
+    if (size == 0)
+        return dest;
+    while (i + 1 < size && src[i]) {
         dest[i] = src[i];
         i++;
     }

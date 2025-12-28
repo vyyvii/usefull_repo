@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_is_prime
 ** File description:
-** Write a function that returns 1 if the number is prime and 0 if not.
+** Check if a number is prime (returns 1 if prime, else 0).
 */
 
 #include "utilslib.h"

@@ -2,8 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** take_user_input
 ** File description:
-** Take the user input via a getline
-** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (getline, strcspn)
+** Read a line from stdin into the provided buffer (uses getline/strcspn).
 */
 
 #include "utilslib.h"

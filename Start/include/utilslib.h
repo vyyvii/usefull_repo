@@ -174,7 +174,18 @@ int my_getnbr(char const *str);
  * @note Ignores any character after the valid numeric part.
  * @note Part of UtilsLib by Victor Defauchy.
  */
-double my_get_double_nbr(const char *str);
+double my_get_double_nbr(char const *str);
+
+/**
+ * @ingroup int_str
+ * @brief Converts a string to a long long.
+ * @param str Source string (optional '+'/'-' and one decimal point).
+ * @return Converted long long value.
+ * @note Complexity: O(n)
+ * @note Ignores any character after the valid numeric part.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+long long my_get_longlong_nbr(char const *str);
 
 /**
  * @ingroup int_str
@@ -355,12 +366,12 @@ char *my_strcpy(char *dest, char const *src);
  * @brief Copies at most n characters from src into dest and appends '\0'.
  * @param dest Destination buffer.
  * @param src Source string.
- * @param n Max number of characters to copy.
+ * @param size Max number of characters to copy.
  * @return Pointer to dest.
  * @note Complexity: O(n)
  * @note Part of UtilsLib by Victor Defauchy.
  */
-char *my_strncpy(char *dest, char const *src, int n);
+char *my_strncpy(char *dest, char const *src, size_t size);
 
 /**
  * @ingroup str

@@ -2,8 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_find_prime_sup
 ** File description:
-** Write a function that returns the smallest prime number
-** that is greater than, or equal to, the number given as a parameter.
+** Return the smallest prime number greater than or equal to the input.
 */
 
 #include "utilslib.h"

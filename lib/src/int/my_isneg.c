@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_isneg
 ** File description:
-** Write a function that return 1 if negative, 0 if positive.
+** Return 1 if the integer is negative, otherwise 0.
 */
 
 #include "utilslib.h"

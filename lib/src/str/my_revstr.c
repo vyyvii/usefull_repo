@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_revstr
 ** File description:
-** Write a function that reverses a string
+** Reverse a string in place.
 */
 
 #include "utilslib.h"

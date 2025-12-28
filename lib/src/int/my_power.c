@@ -2,8 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_power
 ** File description:
-** Write an recursive function that returns
-** the first argument raised to the power p, where p is the second argument.
+** Recursively raise an integer to an integer power with basic overflow guard.
 */
 
 #include "utilslib.h"

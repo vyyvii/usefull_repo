@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_strcmp
 ** File description:
-** Compare two strings
+** Lexicographically compare two strings.
 */
 
 #include "utilslib.h"

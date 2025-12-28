@@ -2,9 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_str_islower
 ** File description:
-** Write a function that returns 1 if the string passed
-** as parameter only contains lowercase characters and
-** 0 if the string contains another type of character.
+** Return 1 when the string contains only lowercase letters, otherwise 0.
 */
 
 #include "utilslib.h"

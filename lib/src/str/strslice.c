@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** G-CPE-110-LYN-1-1-organized-27
 ** File description:
-** strslice
+** Return a newly allocated substring between the given indexes.
 */
 
 #include "utilslib.h"

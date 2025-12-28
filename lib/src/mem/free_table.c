@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** free_table
 ** File description:
-** free_table
+** Free a NULL-terminated array of pointers and its elements.
 */
 
 #include "utilslib.h"

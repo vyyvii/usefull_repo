@@ -2,9 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** my_putstr
 ** File description:
-** Write a function that displays, one-by-one, the characters of a string.
-** The address of the string's first character will be found
-** in the pointer passed as a parameter to the function.
+** Print a null-terminated string to stdout, character by character.
 */
 
 #include "utilslib.h"
