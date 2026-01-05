@@ -465,6 +465,18 @@ int take_user_input(char **input);
 
 /**
  * @ingroup matrix
+ * @brief Sort an array of string in place.
+ * @param array The array of strings (NULL terminated).
+ * @param is_reverse If the sort must be done in alphabetical
+ * order (1) or not (-1).
+ * @return Nothing.
+ * @note Complexity: O(n²)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+void alpha_sort(char **array, int is_reverse);
+
+/**
+ * @ingroup matrix
  * @brief Converts a multi-line string into a matrix (char**).
  * @param str String containing '\n' as separators.
  * @param nb_lines Expected number of lines (output size, including final NULL).
