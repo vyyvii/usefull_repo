@@ -465,6 +465,31 @@ int take_user_input(char **input);
 
 /**
  * @ingroup matrix
+ * @brief Frees a CSV matrix created by csv_martice().
+ * @param csv 3D NULL-terminated array (rows of NULL-terminated cells).
+ * @return Nothing.
+ * @note Complexity: O(total cells)
+ * @note Part of UtilsLib by Victor Defauchy.
+ * @pre csv must be a valid pointer obtained from csv_martice() or NULL.
+ */
+void free_csv(char ***csv);
+
+/**
+ * @ingroup matrix
+ * @brief Parses a CSV file into a 3D matrix (lines × cells).
+ * @param file_path Path to the CSV file (delimiter: ';').
+ * @return 3D array where each row is a NULL-terminated array of cells,
+ * and the array itself is NULL-terminated, or NULL if file opening/allocation
+ * fails.
+ * @note Complexity: O(file size)
+ * @note Ownership: The caller must `free` using free_csv().
+ * @note Part of UtilsLib by Victor Defauchy.
+ * @warning File must be readable; invalid paths cause NULL return.
+ */
+char ***csv_martice(char *file_path);
+
+/**
+ * @ingroup matrix
  * @brief Converts a multi-line string into a matrix (char**).
  * @param str String containing '\n' as separators.
  * @param nb_lines Expected number of lines (output size, including final NULL).

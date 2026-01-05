@@ -29,7 +29,7 @@ char **str_to_matrice(char *str, int nb_lines)
             row++;
             start = (int)(i + 1);
         }
-        if (!out[row - 1]) {
+        if (row > 0 && !out[row - 1]) {
             free_matrice(out, row - 1);
             return NULL;
         }
