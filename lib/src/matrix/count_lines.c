@@ -10,8 +10,9 @@
 int count_lines(char *str)
 {
     int lines = 1;
+    size_t len = (size_t)my_strlen(str);
 
-    for (size_t i = 0; i < (size_t)my_strlen(str); i++) {
+    for (size_t i = 0; i < len; i++) {
         if (str[i] == '\n')
             lines++;
     }

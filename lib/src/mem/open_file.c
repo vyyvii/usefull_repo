@@ -9,16 +9,18 @@
 #include "utilslib.h"
 #include <fcntl.h>
 
-static int buffer_realoc(size_t *tot, size_t len, char **buffer)
+static int buffer_realoc(size_t *tot, size_t len, size_t read_size,
+    char **buffer)
 {
-    char *tmp;
+    char *new_buffer;
 
-    if (len + 1 >= *tot) {
-        *tot *= 2;
-        tmp = realloc(*buffer, *tot);
-        if (!tmp)
+    if (len + read_size + 1 > *tot) {
+        while (len + read_size + 1 > *tot)
+            *tot *= 2;
+        new_buffer = realloc(*buffer, *tot);
+        if (!new_buffer)
             return 84;
-        *buffer = tmp;
+        *buffer = new_buffer;
     }
     return 0;
 }
@@ -26,18 +28,17 @@ static int buffer_realoc(size_t *tot, size_t len, char **buffer)
 static int file_runner(int fd, size_t *tot, char **buffer)
 {
     size_t len = 0;
-    ssize_t size = 0;
-    char c;
+    char tmp[100];
+    ssize_t read_size = read(fd, tmp, 100);
 
-    size = read(fd, &c, 1);
-    while (size == 1) {
-        if (buffer_realoc(tot, len, buffer) == 84)
+    while (read_size > 0) {
+        if (buffer_realoc(tot, len, read_size, buffer) == 84)
             return 84;
-        (*buffer)[len] = c;
-        len++;
-        size = read(fd, &c, 1);
+        memcpy(*buffer + len, tmp, read_size);
+        len += read_size;
+        read_size = read(fd, tmp, 100);
     }
-    if (size < 0)
+    if (read_size < 0)
         return 84;
     (*buffer)[len] = '\0';
     return 0;
@@ -46,7 +47,7 @@ static int file_runner(int fd, size_t *tot, char **buffer)
 char *open_file(char *file)
 {
     int fd = open(file, O_RDONLY);
-    size_t tot = 8;
+    size_t tot = 16084;
     char *buffer = malloc(tot);
 
     if (!buffer)
