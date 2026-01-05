@@ -14,7 +14,7 @@ static void free_matrice(char **out, int row)
     free(out);
 }
 
-char **str_to_matrice(char *str, int nb_lines)
+char **str_to_matrice(char *str, int nb_lines, char delim)
 {
     char **out = malloc(sizeof(char *) * (nb_lines + 1));
     int row = 0;
@@ -24,7 +24,7 @@ char **str_to_matrice(char *str, int nb_lines)
     if (!out)
         return NULL;
     for (size_t i = 0; i < len; i++) {
-        if (str[i] == '\n') {
+        if (str[i] == delim) {
             out[row] = strslice(str, start, i);
             row++;
             start = (int)(i + 1);
