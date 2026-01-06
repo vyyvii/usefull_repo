@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** HEADER [project]
 ** File description:
 ** Header file for [project]
@@ -13,5 +13,6 @@
 
 // === MAINS FUNCTIONS ===
     // MAIN
+int project_(int ac, char **av);
 
 #endif /* project */
