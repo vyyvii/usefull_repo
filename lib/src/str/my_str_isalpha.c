@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_str_isalpha
 ** File description:
 ** Return 1 when the string contains only ASCII letters, otherwise 0.

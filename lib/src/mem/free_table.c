@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** free_table
 ** File description:
 ** Free a NULL-terminated array of pointers and its elements.

@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** putcat
 ** File description:
 ** Concatenate two strings, print them, then release the temporary buffer.

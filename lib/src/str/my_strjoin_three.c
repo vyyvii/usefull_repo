@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strjoin_three
 ** File description:
 ** Allocate and return the concatenation of three strings.

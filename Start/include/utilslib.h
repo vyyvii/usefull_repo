@@ -6,11 +6,12 @@
 */
 
 /**
- * @file lib.h
+ * @file utilslib.h
  * @brief This file is the header file of UtilsLib.
  *
  * @details
  * This library provides utilities for:
+ * - character classification (letter, digit, case),
  * - integer manipulation (arithmetic, primality, sorting),
  * - conversion between strings and numbers,
  * - string operations (tests, copies, joins, search),
@@ -40,6 +41,10 @@
     #include <sys/stat.h>
 
 /**
+ * @defgroup char Characters
+ * @brief Utility functions related to character classification.
+ */
+/**
  * @defgroup int Integers
  * @brief Utility functions related to integers.
  */
@@ -59,6 +64,48 @@
  * @defgroup mem Memory and I/O
  * @brief Low-level memory tools and file reading.
  */
+
+// char
+
+/**
+ * @ingroup char
+ * @brief Tests if a character is a digit ('0'..'9').
+ * @param c Character to test.
+ * @return 1 if digit, 0 otherwise.
+ * @note Complexity: O(1)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int is_digit(char c);
+
+/**
+ * @ingroup char
+ * @brief Tests if a character is a letter (A-Z, a-z).
+ * @param c Character to test.
+ * @return 1 if letter, 0 otherwise.
+ * @note Complexity: O(1)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int is_letter(char c);
+
+/**
+ * @ingroup char
+ * @brief Tests if a character is a lowercase letter (a-z).
+ * @param c Character to test.
+ * @return 1 if lowercase, 0 otherwise.
+ * @note Complexity: O(1)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int is_lowerletter(char c);
+
+/**
+ * @ingroup char
+ * @brief Tests if a character is an uppercase letter (A-Z).
+ * @param c Character to test.
+ * @return 1 if uppercase, 0 otherwise.
+ * @note Complexity: O(1)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int is_upperletter(char c);
 
 // int
 
@@ -179,7 +226,7 @@ double my_get_double_nbr(char const *str);
 /**
  * @ingroup int_str
  * @brief Converts a string to a long long.
- * @param str Source string (optional '+'/'-' and one decimal point).
+ * @param str Source string (optionally signed decimal integer).
  * @return Converted long long value.
  * @note Complexity: O(n)
  * @note Ignores any character after the valid numeric part.
@@ -196,17 +243,7 @@ long long my_get_longlong_nbr(char const *str);
  * @note Uses recursion to print digits.
  * @note Part of UtilsLib by Victor Defauchy.
  */
-int my_putnbr(int nb);
-
-/**
- * @ingroup int_str
- * @brief Tests if a character is an ASCII digit.
- * @param c Character.
- * @return 1 if '0'..'9', otherwise 0.
- * @note Complexity: O(1)
- * @note Part of UtilsLib by Victor Defauchy.
- */
-int my_isdigit(char c);
+int my_put_nbr(int nb);
 
 // str
 
@@ -273,6 +310,16 @@ int my_str_isnum(char const *str);
 
 /**
  * @ingroup str
+ * @brief Tests if the string contains only digits or a point.
+ * @param str String.
+ * @return 1 if numeric double only, otherwise 0.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int my_str_isdoublenum(char const *str);
+
+/**
+ * @ingroup str
  * @brief Tests if the string contains only printable characters (32..126).
  * @param str String.
  * @return 1 if printable only, otherwise 0.
@@ -301,31 +348,6 @@ int my_str_isupper(char const *str);
  * @note Part of UtilsLib by Victor Defauchy.
  */
 char *my_strcapitalize(char *str);
-
-/**
- * @ingroup str
- * @brief Concatenates two strings into a newly allocated string.
- * @param s1 First string.
- * @param s2 Second string.
- * @return New string s1+s2, or NULL if allocation fails.
- * @note Complexity: O(|s1| + |s2|)
- * @note Ownership: The caller must `free` the result.
- * @note Part of UtilsLib by Victor Defauchy.
- */
-char *my_strjoin(char const *s1, char const *s2);
-
-/**
- * @ingroup str
- * @brief Concatenates three strings into a newly allocated string.
- * @param s1 First.
- * @param s2 Second.
- * @param s3 Third.
- * @return New string s1+s2+s3, or NULL if allocation fails.
- * @note Complexity: O(|s1| + |s2| + |s3|)
- * @note Ownership: The caller must `free` the result.
- * @note Part of UtilsLib by Victor Defauchy.
- */
-char *my_strjoin_three(char const *s1, char const *s2, char const *s3);
 
 /**
  * @ingroup str
@@ -383,6 +405,31 @@ char *my_strncpy(char *dest, char const *src, size_t size);
  * @note Part of UtilsLib by Victor Defauchy.
  */
 char *my_strdup(char const *str);
+
+/**
+ * @ingroup str
+ * @brief Concatenates two strings into a newly allocated string.
+ * @param s1 First string.
+ * @param s2 Second string.
+ * @return New string s1+s2, or NULL if allocation fails.
+ * @note Complexity: O(|s1| + |s2|)
+ * @note Ownership: The caller must `free` the result.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+char *my_strjoin(char const *s1, char const *s2);
+
+/**
+ * @ingroup str
+ * @brief Concatenates three strings into a newly allocated string.
+ * @param s1 First.
+ * @param s2 Second.
+ * @param s3 Third.
+ * @return New string s1+s2+s3, or NULL if allocation fails.
+ * @note Complexity: O(|s1| + |s2| + |s3|)
+ * @note Ownership: The caller must `free` the result.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+char *my_strjoin_three(char const *s1, char const *s2, char const *s3);
 
 /**
  * @ingroup str
@@ -465,7 +512,7 @@ int take_user_input(char **input);
 
 /**
  * @ingroup matrix
- * @brief Sort an array of string in place.
+ * @brief Sort an array of strings in place.
  * @param array The array of strings (NULL terminated).
  * @param is_reverse If the sort must be done in alphabetical
  * order (1) or not (-1).
@@ -518,6 +565,28 @@ int my_show_word_array(char *const *tab);
  * @note Part of UtilsLib by Victor Defauchy.
  */
 int count_lines(char *str);
+
+/**
+ * @ingroup matrix
+ * @brief Converts a space-separated string into a word array.
+ * @param str Source string.
+ * @return Array of allocated words with terminal NULL,
+ * or NULL if allocation fails.
+ * @note Complexity: O(|str|)
+ * @note Ownership: The caller must `free` each word and the array.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+char **str_to_word_array(char *str);
+
+/**
+ * @ingroup matrix
+ * @brief Returns the count of arguments in a string.
+ * @param str Source string.
+ * @return Number of space-separated arguments.
+ * @note Complexity: O(|str|)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int ac(char *str);
 
 // mem
 

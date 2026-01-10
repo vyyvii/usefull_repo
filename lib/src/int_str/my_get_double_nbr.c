@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_get_double_nbr
 ** File description:
 ** Parse a double value from a string (optional sign and decimal part).

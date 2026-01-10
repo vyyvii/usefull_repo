@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_power
 ** File description:
 ** Recursively raise a double to an integer power.

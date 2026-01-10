@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_is_prime
 ** File description:
 ** Check if a number is prime (returns 1 if prime, else 0).

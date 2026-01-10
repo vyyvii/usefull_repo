@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_isneg
 ** File description:
 ** Return 1 if the integer is negative, otherwise 0.

@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_get_longlong_nbr
 ** File description:
 ** Parse a long long value from a string with basic overflow guard.

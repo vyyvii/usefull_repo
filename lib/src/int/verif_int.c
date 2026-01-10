@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** verif_int
 ** File description:
 ** Validate that the string is an integer representation and convert it.

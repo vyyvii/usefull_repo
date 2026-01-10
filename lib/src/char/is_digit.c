@@ -1,6 +1,6 @@
 /*
-** EPITECH PROJECT, 2025
-** my_getnbr
+** EPITECH PROJECT, 2026
+** is_digit
 ** File description:
 ** Return 1 if the character is a decimal digit, otherwise 0.
 */

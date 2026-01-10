@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** ac
 ** File description:
 ** Count the number of arguments in a NULL-terminated array.

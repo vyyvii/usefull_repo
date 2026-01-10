@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_str_islower
 ** File description:
 ** Return 1 when the string contains only lowercase letters, otherwise 0.

@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_show_word_array
 ** File description:
 ** Print each string of a NULL-terminated array on its own line.

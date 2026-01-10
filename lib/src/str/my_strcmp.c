@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strcmp
 ** File description:
 ** Lexicographically compare two strings.

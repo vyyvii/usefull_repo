@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strdup
 ** File description:
 ** Duplicate a string into a newly allocated buffer.

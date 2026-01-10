@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strncmp
 ** File description:
 ** Compare two strings up to n characters (strncmp behavior).

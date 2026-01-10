@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** take_user_input
 ** File description:
 ** Read a line from stdin into the provided buffer (uses getline/strcspn).

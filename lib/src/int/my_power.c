@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_power
 ** File description:
 ** Recursively raise an integer to an integer power with basic overflow guard.

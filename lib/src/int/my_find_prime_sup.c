@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_find_prime_sup
 ** File description:
 ** Return the smallest prime number greater than or equal to the input.

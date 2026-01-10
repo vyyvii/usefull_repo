@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strjoin
 ** File description:
 ** Allocate and return the concatenation of two strings.

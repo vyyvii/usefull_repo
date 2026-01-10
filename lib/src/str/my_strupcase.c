@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strupcase
 ** File description:
 ** Convert all letters of the string to uppercase in place.

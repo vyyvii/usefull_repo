@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strcpy
 ** File description:
 ** Copy a null-terminated source string into the destination buffer.

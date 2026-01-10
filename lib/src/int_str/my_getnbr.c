@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_getnbr
 ** File description:
 ** Parse an int from a string with basic overflow guard.

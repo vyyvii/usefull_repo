@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_swap
 ** File description:
 ** Swap the content of two memory blocks of the given size.

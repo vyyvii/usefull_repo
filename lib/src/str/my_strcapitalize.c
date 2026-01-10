@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strcapitalize
 ** File description:
 ** Capitalize the first letter of each word in the string.

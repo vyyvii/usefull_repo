@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strlowcase
 ** File description:
 ** Convert all letters of the string to lowercase in place.

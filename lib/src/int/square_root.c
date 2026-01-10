@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** square_root
 ** File description:
 ** Return the perfect square root of nb, or 0 if nb is not a perfect square.

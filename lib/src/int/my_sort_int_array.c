@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_sort_int_array
 ** File description:
 ** Sort an integer array in ascending order (in-place insertion sort).

@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_putstr
 ** File description:
 ** Print a null-terminated string to stdout, character by character.

@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strlen
 ** File description:
 ** Count the number of characters in a null-terminated string.

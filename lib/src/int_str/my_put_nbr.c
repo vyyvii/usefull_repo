@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_put_nbr.c
 ** File description:
 ** Display an integer on stdout, handling the full int range.

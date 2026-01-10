@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_memcpy
 ** File description:
 ** Copy a memory block of the given size from src to dest.

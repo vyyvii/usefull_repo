@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** G-CPE-110-LYN-1-1-organized-27
 ** File description:
 ** Read an entire file into a newly allocated buffer (open/read/close).

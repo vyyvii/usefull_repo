@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2026
 ** my_strstr
 ** File description:
 ** Locate a substring within a string (strstr behavior).
