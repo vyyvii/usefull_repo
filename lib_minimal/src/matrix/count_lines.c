@@ -1,0 +1,20 @@
+/*
+** EPITECH PROJECT, 2026
+** G-CPE-110-LYN-1-1-organized-27
+** File description:
+** Count the number of newline-separated lines in a string.
+*/
+
+#include "utilslib.h"
+
+int count_lines(char *str)
+{
+    int lines = 1;
+    size_t len = (size_t)my_strlen(str);
+
+    for (size_t i = 0; i < len; i++) {
+        if (str[i] == '\n')
+            lines++;
+    }
+    return lines;
+}

@@ -1,8 +1,8 @@
 ##
 ## EPITECH PROJECT, 2026
-## Makefile UtilsLib
+## Makefile UtilsLibMinimal
 ## File description:
-## Makefile UtilsLib
+## Makefile UtilsLibMinimal
 ##
 
 .PHONY: all clean fclean re
@@ -13,7 +13,7 @@ OBJ = $(SRC:.c=.o)
 CC = epiclang
 CFLAGS = -Wall -Wextra -g3 -Iinclude
 
-NAME = libUtilsLib.a
+NAME = libUtilsLibMinimal.a
 REMOVE = rm -f -r
 
 all: $(NAME)
@@ -25,7 +25,7 @@ $(NAME): $(OBJ) $(OBJ_MAIN)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(REMOVE) $(OBJ)
+	$(REMOVE) $(OBJ) $(OBJ_MAIN) $(OBJ_TEST)
 
 fclean: clean
 	$(REMOVE) $(NAME) a.out
