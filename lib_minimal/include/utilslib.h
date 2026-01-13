@@ -1,13 +1,13 @@
 /*
 ** EPITECH PROJECT, 2025
-** HEADER UtilsLib
+** HEADER UtilsLibMinimal
 ** File description:
-** Header file for UtilsLib
+** Header file for UtilsLibMinimal
 */
 
 /**
  * @file utilslib.h
- * @brief This file is the header file of UtilsLib.
+ * @brief This file is the header file of UtilsLibMinimal.
  *
  * @details
  * This library provides utilities for:
@@ -17,6 +17,8 @@
  * - string operations (tests, copies, joins, search),
  * - management of string arrays (matrices),
  * - low-level memory primitives (copy, swap, file reading).
+ * UtilsLibMinimal is the minimal version of Utilslib. Without realloc, printf &
+ * getline.
  *
  * Functions that allocate memory return a pointer that must be freed
  * by the caller via `free`. Some functions use system calls and standard
