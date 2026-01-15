@@ -17,3 +17,14 @@ void free_table(void **table)
     }
     free(table);
 }
+
+void free_partial_table(void **table, int n)
+{
+    if (!table)
+        return;
+    for (int i = 0; i < n; i++) {
+        free(table[i]);
+        table[i] = NULL;
+    }
+    free(table);
+}

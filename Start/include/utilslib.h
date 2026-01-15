@@ -374,6 +374,17 @@ int my_strncmp(char const *s1, char const *s2, int n);
 
 /**
  * @ingroup str
+ * @brief Compares two strings (lexicographic) but case has no impact.
+ * @param s1 String 1.
+ * @param s2 String 2.
+ * @return 0 if equal, 1 if s1/S1>s2/S2, -1 otherwise.
+ * @note Complexity: O(min(n, m))
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int my_strcmp_no_case(char *a, char *b);
+
+/**
+ * @ingroup str
  * @brief Copies src into dest (including '\0').
  * @param dest Destination buffer (large enough).
  * @param src Source string.
@@ -512,6 +523,20 @@ int take_user_input(char **input);
 
 /**
  * @ingroup matrix
+ * @brief Put every unique word of a string into a new allocated array,
+ * where each cell represent a word.
+ * A word is composed by only upper or lower case.
+ * @param array The array of strings (NULL terminated).
+ * @param is_reverse If the sort must be done in alphabetical
+ * order (1) or not (-1).
+ * @return Nothing.
+ * @note Complexity: O(n²)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+char **uniq_words(char *str);
+
+/**
+ * @ingroup matrix
  * @brief Sort an array of strings in place.
  * @param array The array of strings (NULL terminated).
  * @param is_reverse If the sort must be done in alphabetical
@@ -568,7 +593,7 @@ int count_lines(char *str);
 
 /**
  * @ingroup matrix
- * @brief Converts a space-separated string into a word array.
+ * @brief Converts a string into a word array.
  * @param str Source string.
  * @return Array of allocated words with terminal NULL,
  * or NULL if allocation fails.
@@ -577,6 +602,18 @@ int count_lines(char *str);
  * @note Part of UtilsLib by Victor Defauchy.
  */
 char **str_to_word_array(char *str);
+
+/**
+ * @ingroup matrix
+ * @brief Converts a space-separated string into a word array.
+ * @param str Source string.
+ * @return Array of allocated words with terminal NULL,
+ * or NULL if allocation fails.
+ * @note Complexity: O(|str|)
+ * @note Ownership: The caller must `free` each word and the array.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+char **str_to_word_array_space(char *str);
 
 /**
  * @ingroup matrix
@@ -628,6 +665,16 @@ void free_table(void **table);
 
 /**
  * @ingroup mem
+ * @brief Frees an array of pointers and each entry up to n.
+ * @param table Array to free (NULL-terminated).
+ * @return Nothing.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+void free_partial_table(void **table, int n);
+
+/**
+ * @ingroup mem
  * @brief Copies n bytes from src to dest (like memcpy, no overlap handling).
  * @param dest Destination.
  * @param src Source.
@@ -639,4 +686,4 @@ void free_table(void **table);
  */
 void *my_memcpy(void *dest, const void *src, size_t n);
 
-#endif /* UTILSLIB */
+#endif /* !UTILSLIB */
