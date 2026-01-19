@@ -9,11 +9,19 @@
 
 int my_str_isnum(char const *str)
 {
+    int is_minus = 0;
+
     while (*str) {
-        if (*str >= 48 && *str <= 57)
+        if (is_digit(*str)) {
             str++;
-        else
-            return 0;
+            continue;
+        }
+        if (*str == '-' && !is_minus) {
+            str++;
+            is_minus = 1;
+            continue;
+        }
+        return 0;
     }
     return 1;
 }

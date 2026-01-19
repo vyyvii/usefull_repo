@@ -8,14 +8,14 @@
 
 #include "utilslib.h"
 
-void save_word(int start, int end, char *str, char **array, int *cell)
+static void find_start_end(int *start, int *end, char *str, int i)
 {
-    if (start < end) {
-        array[*cell] = strslice(str, start, end);
-        if (!array[*cell])
-            free_partial_table((void **)array, *cell);
-        (*cell)++;
-    }
+    *start = i;
+    while (str[*start] && !is_letter(str[*start]))
+        (*start)++;
+    *end = *start;
+    while (str[*end] && is_letter(str[*end]))
+        (*end)++;
 }
 
 char **str_to_word_array(char *str)
@@ -29,13 +29,13 @@ char **str_to_word_array(char *str)
     if (!str || !array)
         return NULL;
     while (str[i]) {
-        start = i;
-        while (str[start] && !is_letter(str[start]))
-            start++;
-        end = start;
-        while (str[end] && is_letter(str[end]))
-            end++;
-        save_word(start, end, str, array, &cell);
+        find_start_end(&start, &end, str, i);
+        if (start < end) {
+            array[cell] = strslice(str, start, end);
+            cell++;
+        }
+        if (cell > 0 && !array[cell - 1])
+            free_partial_table((void **)array, cell);
         i = end;
     }
     array[cell] = NULL;
