@@ -52,13 +52,19 @@ RM_FILES 	= "*.gcno" "*.gcda" "*.html" "*.css" \
 # ─────────────────────────────────────────────────────────────
 # BUILDING RULES
 # ─────────────────────────────────────────────────────────────
-all: compile_lib $(NAME)
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 							      LIB COMPILATION
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compile_lib_all:
 	cd lib && make re && cp libUtilsLib.a ../ && cd ../
 
 compile_lib:
 	cd lib && make && cp libUtilsLib.a ../ && cd ../
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 							      BINARY BUILDING
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+all: compile_lib $(NAME)
 
 $(NAME): $(OBJ) $(OBJ_MAIN)
 	$(CC) -o $@ $^ $(LDFLAGS)
