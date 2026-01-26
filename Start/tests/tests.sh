@@ -2,7 +2,7 @@
 
 success=0
 fail=0
-try=1
+try=2
 
 # HELP
 if diff <(./unit_tests_sh -h) "tests/answers/help" > /dev/null; then
@@ -13,10 +13,16 @@ else
     ((fail++))
 fi
 
+if [ $? -eq 0 ]; then
+    echo "Help exit code : OK"
+    ((success++))
+else
+    echo "Help exit code : KO"
+    ((fail++))
+fi
+
 # ERRORS
-
 # BASICS
-
 # SCORE
 score=$(( success * 100 / $try))
 echo "Try: $try/$try ; successs: $success/$try ; Fails: $fail/$try ; Percent: $score%"

@@ -11,7 +11,7 @@
 
 // === TYPEDEFS ===
 
-// === MAINS FUNCTIONS ===
+// === FUNCTIONS ===
     // MAIN
 int project_(int ac, char **av);
 

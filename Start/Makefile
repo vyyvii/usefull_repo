@@ -1,11 +1,14 @@
 ##
 ## EPITECH PROJECT, 2026
-## Makefile [project]
+## [project]
 ## File description:
 ## Makefile [project]
 ##
 
-.PHONY: all clean fclean re unit_tests tests_run
+# ─────────────────────────────────────────────────────────────
+# PHONY TARGETS
+# ─────────────────────────────────────────────────────────────
+.PHONY: all clean fclean re unit_tests tests_run functional_tests compile_lib compile_lib_all
 
 # ─────────────────────────────────────────────────────────────
 # NAME
@@ -13,14 +16,13 @@
 NAME 		= [project]
 
 # ─────────────────────────────────────────────────────────────
-# SOURCES & OBJECTS
+# SOURCE FILES AND OBJECT FILES
 # ─────────────────────────────────────────────────────────────
-SRC 		= src/project.c
+SRC 		= src/[project].c
 SRC_MAIN	= src/main.c
-SRC_TEST 	= tests/test_utils.c
-
+SRC_TEST 	= tests/test_main.c
 OBJ 		= $(SRC:.c=.o)
-OBJ_MAIN 	= $(SRC_MAIN:.c=.o)
+OBJ_MAIN	= $(SRC_MAIN:.c=.o)
 OBJ_TEST 	= $(SRC_TEST:.c=.o)
 
 # ────────────────────────────────────────────────────────────
@@ -32,24 +34,31 @@ CC			= epiclang
 # COMPILATION FLAGS & LIBS
 # ─────────────────────────────────────────────────────────────
 CFLAGS      = -Wall -Wextra -g3 -Iinclude
-LDFLAGS     = -L./ -lUtilsLib -lm
+LDFLAGS 	= -L./ -lUtilsLib
 
 # ─────────────────────────────────────────────────────────────
 # TEST FLAGS & LIBS
 # ─────────────────────────────────────────────────────────────
 TEST_FLAGS  = --coverage
-TEST_LIBS   = -lcriterion
+TEST_LIBS   = -lcmocka
 
 # ─────────────────────────────────────────────────────────────
 # TOOLS
 # ─────────────────────────────────────────────────────────────
 REMOVE 		= rm -f -r
-GCOV_FILES 	= "*.gcno" "*.gcda" "*.html" "*.css"
+RM_FILES 	= "*.gcno" "*.gcda" "*.html" "*.css" \
+			  "*.gcov" "*.log" ".out" "*.o" "*.swp"
 
 # ─────────────────────────────────────────────────────────────
-# RULES
+# BUILDING RULES
 # ─────────────────────────────────────────────────────────────
-all: $(NAME)
+all: compile_lib $(NAME)
+
+compile_lib_all:
+	cd lib && make re && cp libUtilsLib.a ../ && cd ../
+
+compile_lib:
+	cd lib && make && cp libUtilsLib.a ../ && cd ../
 
 $(NAME): $(OBJ) $(OBJ_MAIN)
 	$(CC) -o $@ $^ $(LDFLAGS)
@@ -64,28 +73,38 @@ clean:
 	$(REMOVE) $(OBJ) $(OBJ_MAIN) $(OBJ_TEST)
 
 fclean: clean
-	$(REMOVE) $(NAME) unit_tests functional_tests a.out
-	for f in $(GCOV_FILES); do find . -name "$$f" -delete; done
+	$(REMOVE) $(NAME) unit_tests functional_tests ncurses_state libUtilsLib.a
+	for f in $(RM_FILES); do find . -name "$$f" -delete; done
+	cd lib && make fclean && cd ../
 
-re: fclean all
+re: fclean compile_lib_all all
 
 # ─────────────────────────────────────────────────────────────
 # TESTING RULES
 # ─────────────────────────────────────────────────────────────
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 							  UNIT TESTS BUILDING
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 unit_tests: CC = gcc
 unit_tests: CFLAGS += $(TEST_FLAGS)
 unit_tests: LDFLAGS += $(TEST_LIBS)
 unit_tests: $(OBJ) $(OBJ_TEST)
 	$(CC) -o unit_tests $^ $(LDFLAGS) $(TEST_FLAGS)
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 						FUNCTIONAL TESTS BUILDING
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 functional_tests: CC = gcc
 functional_tests: CFLAGS += $(TEST_FLAGS)
 functional_tests: LDFLAGS += $(TEST_LIBS)
 functional_tests: $(OBJ) $(OBJ_MAIN)
 	$(CC) -o functional_tests $^ $(LDFLAGS) $(TEST_FLAGS)
 
+# ─────────────────────────────────────────────────────────────
+# RUN TESTS AND GENERATE COVERAGE REPORT
+# ─────────────────────────────────────────────────────────────
 tests_run: CC = gcc
-tests_run: fclean unit_tests functional_tests
+tests_run: fclean compile_lib unit_tests functional_tests
 	./unit_tests
 	./tests/tests.sh
 	gcovr -b --exclude-directories tests --html-details -o coverage_report.html

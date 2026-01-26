@@ -7,15 +7,15 @@
 
 #include "utilslib.h"
 
-static int detect_point_minus(char const *str, int *is_point, int *is_minus)
+static int detect_point_minus(char const **str, int *is_point, int *is_minus)
 {
-    if (*str == '.' && !(*is_point)) {
-        str++;
+    if (**str == '.' && !(*is_point)) {
+        (*str)++;
         *is_point = 1;
         return 1;
     }
-    if (*str == '-' && !(*is_minus)) {
-        str++;
+    if (**str == '-' && !(*is_minus)) {
+        (*str)++;
         *is_minus = 1;
         return 1;
     }
@@ -32,7 +32,7 @@ int my_str_isdoublenum(char const *str)
             str++;
             continue;
         }
-        if (detect_point_minus(str, &is_point, &is_minus))
+        if (detect_point_minus(&str, &is_point, &is_minus))
             continue;
         return 0;
     }
