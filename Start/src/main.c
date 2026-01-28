@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2026
-** main [project]
+** [project]
 ** File description:
 ** Descrption
 */

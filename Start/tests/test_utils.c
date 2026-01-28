@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2026
-** secured
+** [project]
 ** File description:
 ** Main file for cmocka test
 */

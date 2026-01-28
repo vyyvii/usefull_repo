@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2026
-** HEADER [project]
+** [project]
 ** File description:
 ** Header file for [project]
 */

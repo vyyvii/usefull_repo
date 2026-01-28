@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2025
-** HEADER UtilsLib
+** UtilsLib
 ** File description:
 ** Header file for UtilsLib
 */

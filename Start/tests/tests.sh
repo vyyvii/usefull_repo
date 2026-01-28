@@ -5,7 +5,7 @@ fail=0
 try=2
 
 # HELP
-if diff <(./unit_tests_sh -h) "tests/answers/help" > /dev/null; then
+if diff <(./functional_tests -h) "tests/answers/help" > /dev/null; then
     echo "Help message : OK"
     ((success++))
 else
@@ -13,6 +13,7 @@ else
     ((fail++))
 fi
 
+./functional_tests -h
 if [ $? -eq 0 ]; then
     echo "Help exit code : OK"
     ((success++))
