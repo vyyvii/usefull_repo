@@ -30,6 +30,8 @@
 
 #ifndef UTILSLIB
     #define UTILSLIB
+    #define SUCCESS 0
+    #define FAILURE 84
     #include <stddef.h>
     #include <stdio.h>
     #include <stdlib.h>

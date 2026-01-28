@@ -7,6 +7,8 @@
 
 #ifndef project
     #define project
+    #define SUCCESS 0
+    #define FAILURE 84
     #include "utilslib.h"
 
 // === TYPEDEFS ===

@@ -14,13 +14,13 @@ int verif_int(char *number, int *result)
     int start = 0;
 
     if (len_number == 0 || (number[0] == '-' && len_number == 1))
-        return 84;
+        return FAILURE;
     if (number[0] == '-')
         start = 1;
     for (int i = start; i < len_number; i++) {
         if ((number[i] < 48 || number[i] > 57))
-            return 84;
+            return FAILURE;
     }
     *result = my_getnbr(number);
-    return 0;
+    return SUCCESS;
 }

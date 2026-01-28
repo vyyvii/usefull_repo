@@ -10,10 +10,10 @@
 int my_putstr(char const *str)
 {
     if (!str)
-        return 84;
+        return FAILURE;
     while (*str != '\0') {
         my_putchar(*str);
         str++;
     }
-    return 0;
+    return SUCCESS;
 }

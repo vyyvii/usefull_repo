@@ -39,6 +39,8 @@
     #include <limits.h>
     #include <sys/types.h>
     #include <sys/stat.h>
+    #define SUCCESS 0
+    #define FAILURE 84
 
 /**
  * @defgroup char Characters

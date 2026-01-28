@@ -13,7 +13,7 @@ int not_in_array(char **new_array, char *str)
 {
     for (int i = 0; new_array[i]; i++) {
         if (my_strcmp(new_array[i], str) == 0)
-            return 0;
+            return SUCCESS;
     }
     return 1;
 }

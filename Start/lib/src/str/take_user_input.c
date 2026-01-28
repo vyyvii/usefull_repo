@@ -15,7 +15,7 @@ int take_user_input(char **input)
     my_putstr("Enter next value: ");
     len = getline(input, &size, stdin);
     if (len == -1)
-        return 84;
+        return FAILURE;
     (*input)[strcspn(*input, "\n")] = '\0';
-    return 0;
+    return SUCCESS;
 }

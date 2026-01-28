@@ -18,5 +18,5 @@ int my_put_nbr(int nb)
     if (value >= 10)
         my_put_nbr((int)(value / 10));
     my_putchar((char)((value % 10) + '0'));
-    return 0;
+    return SUCCESS;
 }

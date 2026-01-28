@@ -19,10 +19,10 @@ static int buffer_realoc(size_t *tot, size_t len, size_t read_size,
             *tot *= 2;
         new_buffer = realloc(*buffer, *tot);
         if (!new_buffer)
-            return 84;
+            return FAILURE;
         *buffer = new_buffer;
     }
-    return 0;
+    return SUCCESS;
 }
 
 static int file_runner(int fd, size_t *tot, char **buffer)
@@ -33,15 +33,15 @@ static int file_runner(int fd, size_t *tot, char **buffer)
 
     while (read_size > 0) {
         if (buffer_realoc(tot, len, read_size, buffer) == 84)
-            return 84;
+            return FAILURE;
         memcpy(*buffer + len, tmp, read_size);
         len += read_size;
         read_size = read(fd, tmp, 100);
     }
     if (read_size < 0)
-        return 84;
+        return FAILURE;
     (*buffer)[len] = '\0';
-    return 0;
+    return SUCCESS;
 }
 
 char *open_file(char *file)
