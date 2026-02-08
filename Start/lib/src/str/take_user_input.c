@@ -12,10 +12,10 @@ int take_user_input(char **input)
     size_t size = 0;
     ssize_t len;
 
-    my_putstr("Enter next value: ");
     len = getline(input, &size, stdin);
     if (len == -1)
         return FAILURE;
-    (*input)[strcspn(*input, "\n")] = '\0';
+    else if (len > 0 && (*input)[len - 1] == '\n')
+        (*input)[len - 1] = '\0';
     return SUCCESS;
 }

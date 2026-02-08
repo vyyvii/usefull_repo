@@ -34,7 +34,7 @@ static int file_runner(int fd, size_t *tot, char **buffer)
     while (read_size > 0) {
         if (buffer_realoc(tot, len, read_size, buffer) == 84)
             return FAILURE;
-        memcpy(*buffer + len, tmp, read_size);
+        my_memcpy(*buffer + len, tmp, read_size);
         len += read_size;
         read_size = read(fd, tmp, 100);
     }

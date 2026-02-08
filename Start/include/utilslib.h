@@ -1,6 +1,6 @@
 /*
-** EPITECH PROJECT, 2025
-** UtilsLib
+** EPITECH PROJECT, 2026
+** HEADER UtilsLib
 ** File description:
 ** Header file for UtilsLib
 */
@@ -30,8 +30,6 @@
 
 #ifndef UTILSLIB
     #define UTILSLIB
-    #define SUCCESS 0
-    #define FAILURE 84
     #include <stddef.h>
     #include <stdio.h>
     #include <stdlib.h>
@@ -41,6 +39,8 @@
     #include <limits.h>
     #include <sys/types.h>
     #include <sys/stat.h>
+    #define SUCCESS 0
+    #define FAILURE 84
 
 /**
  * @defgroup char Characters
@@ -108,6 +108,17 @@ int is_lowerletter(char c);
  * @note Part of UtilsLib by Victor Defauchy.
  */
 int is_upperletter(char c);
+
+/**
+ * @ingroup char
+ * @brief Writes a character to stdout.
+ * @param c Character to write.
+ * @return Nothing.
+ * @note Complexity: O(1)
+ * @note Uses write(2).
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+void my_putchar(char c);
 
 // int
 
@@ -251,14 +262,25 @@ int my_put_nbr(int nb);
 
 /**
  * @ingroup str
- * @brief Writes a character to stdout.
- * @param c Character to write.
- * @return Nothing.
- * @note Complexity: O(1)
- * @note Uses write(2).
+ * @brief Tell if the string contain the char.
+ * @param str String
+ * @param c Character to test.
+ * @return 1 if c if in str, 0 otherwise.
+ * @note Complexity: O(n)
  * @note Part of UtilsLib by Victor Defauchy.
  */
-void my_putchar(char c);
+int contains_char(char *str, char c);
+
+/**
+ * @ingroup str
+ * @brief Count the occurences of c in str.
+ * @param str String
+ * @param c Character to test.
+ * @return Hte occurences of c in str
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int count_char(char *str, char c);
 
 /**
  * @ingroup str
@@ -279,6 +301,16 @@ int my_putstr(char const *str);
  * @note Part of UtilsLib by Victor Defauchy.
  */
 char *my_revstr(char *str);
+
+/**
+ * @ingroup str
+ * @brief Tests if the string contains only spaces ' '/'\t'/'\n'.
+ * @param str String.
+ * @return 1 if spaces only, otherwise 0.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int my_str_is_only_space(char *str);
 
 /**
  * @ingroup str
