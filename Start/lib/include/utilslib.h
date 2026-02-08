@@ -77,6 +77,7 @@ int is_letter(char c);
 int is_lowerletter(char c);
 int is_upperletter(char c);
 void my_putchar(char c);
+void my_putchar_error(char c);
 
 /* ============================================================
 ** INT
@@ -108,6 +109,7 @@ int contains_char(char *str, char c);
 int count_char(char *str, char c);
 
 void my_putstr(char const *str);
+void my_putstr_error(char const *str);
 int my_strlen(char const *str);
 
 char *my_revstr(char *str);

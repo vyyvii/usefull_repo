@@ -11,7 +11,7 @@ SRC = $(shell find src -name '*.c')
 OBJ = $(SRC:.c=.o)
 
 CC = epiclang
-CFLAGS = -Wall -Wextra -g3 -Iinclude
+CFLAGS = -Wall -Wextra -g3 -Iinclude -O0 -fno-inline
 
 NAME = libUtilsLib.a
 REMOVE = rm -f -r

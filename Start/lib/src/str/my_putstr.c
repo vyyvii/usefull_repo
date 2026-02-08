@@ -23,3 +23,20 @@ void my_putstr(char const *str)
         str++;
     }
 }
+
+/**
+ * @ingroup str
+ * @brief Prints a string to stderr.
+ * @param str Null-terminated string.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+void my_putstr_error(char const *str)
+{
+    if (!str)
+        return;
+    while (*str != '\0') {
+        my_putchar_error(*str);
+        str++;
+    }
+}
