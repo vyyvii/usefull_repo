@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** is_lowerletter
+** UtilisLib
 ** File description:
-** Return 1 if the character is a lower letter, otherwise 0.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup char
+ * @brief Tests if a character is a lowercase letter (a-z).
+ * @param c Character to test.
+ * @return 1 if lowercase, 0 otherwise.
+ * @note Complexity: O(1)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int is_lowerletter(char c)
 {
     if (c >= 'a' && c <= 'z')

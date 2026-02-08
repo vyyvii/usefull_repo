@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** G-CPE-110-LYN-1-1-organized-27
+** UtilisLib
 ** File description:
-** Count the number of newline-separated lines in a string.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup matrix
+ * @brief Counts the number of lines based on '\n'.
+ * @param str Source string.
+ * @return Number of lines (= number of '\n' + 1).
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int count_lines(char *str)
 {
     int lines = 1;

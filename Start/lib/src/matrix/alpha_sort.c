@@ -1,12 +1,22 @@
 /*
 ** EPITECH PROJECT, 2026
-** G-CPE-110-LYN-1-1-organized-27
+** UtilisLib
 ** File description:
-** Count the number of newline-separated lines in a string.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup matrix
+ * @brief Sort an array of strings in place.
+ * @param array The array of strings (NULL terminated).
+ * @param is_reverse If the sort must be done in alphabetical
+ * order (1) or not (-1).
+ * @return Nothing.
+ * @note Complexity: O(n²)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 void alpha_sort(char **array, int is_reverse)
 {
     char *tmp;

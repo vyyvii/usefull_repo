@@ -1,13 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_str_is_only_space
+** UtilisLib
 ** File description:
-** Return 1 when the string contains only space or tabs or new_lines,
-** otherwise 0.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Tests if the string contains only spaces ' '/'\t'/'\n'.
+ * @param str String.
+ * @return 1 if spaces only, otherwise 0.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_str_is_only_space(char *str)
 {
     for (int i = 0; str[i]; i++) {

@@ -1,21 +1,29 @@
 /*
 ** EPITECH PROJECT, 2026
-** take_user_input
+** UtilisLib
 ** File description:
-** Read a line from stdin into the provided buffer (uses getline/strcspn).
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
-int take_user_input(char **input)
+/**
+ * @ingroup str
+ * @brief Reads one line from stdin with user input.
+ * @return The string of the user.
+ * @warning Uses getline(3).
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+char *take_user_input(void)
 {
     size_t size = 0;
     ssize_t len;
+    char *input;
 
-    len = getline(input, &size, stdin);
+    len = getline(&input, &size, stdin);
     if (len == -1)
-        return FAILURE;
-    else if (len > 0 && (*input)[len - 1] == '\n')
-        (*input)[len - 1] = '\0';
-    return SUCCESS;
+        return NULL;
+    else if (len > 0 && input[len - 1] == '\n')
+        input[len - 1] = '\0';
+    return input;
 }

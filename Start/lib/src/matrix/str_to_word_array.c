@@ -1,9 +1,8 @@
 /*
 ** EPITECH PROJECT, 2026
-** str_to_word_array
+** UtilisLib
 ** File description:
-** Put every word of a string into a new allocated array, where each
-** cell represent a word. A word is composed by only upper or lower case.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
@@ -18,6 +17,16 @@ static void find_start_end(int *start, int *end, char *str, int i)
         (*end)++;
 }
 
+/**
+ * @ingroup matrix
+ * @brief Converts a string into a word array.
+ * @param str Source string.
+ * @return Array of allocated words with terminal NULL,
+ * or NULL if allocation fails.
+ * @note Complexity: O(|str|)
+ * @note Ownership: The caller must `free` each word and the array.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char **str_to_word_array(char *str)
 {
     char **array = malloc(sizeof(char *) * (my_strlen(str) + 1));

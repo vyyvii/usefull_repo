@@ -1,12 +1,21 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strcmp
+** UtilisLib
 ** File description:
-** Lexicographically compare two strings.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Compares two strings (lexicographic).
+ * @param s1 String 1.
+ * @param s2 String 2.
+ * @return 0 if equal, 1 if s1>s2, -1 otherwise.
+ * @note Complexity: O(min(n, m))
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_strcmp(char const *s1, char const *s2)
 {
     int i = 0;

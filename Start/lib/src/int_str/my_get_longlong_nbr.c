@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_get_longlong_nbr
+** UtilisLib
 ** File description:
-** Parse a long long value from a string with basic overflow guard.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
@@ -20,6 +20,15 @@ static int go_in_number(long long *result, const char *str, int i, int sign)
     return 1;
 }
 
+/**
+ * @ingroup int_str
+ * @brief Converts a string to a long long.
+ * @param str Source string (optionally signed decimal integer).
+ * @return Converted long long value.
+ * @note Complexity: O(n)
+ * @note Ignores any character after the valid numeric part.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 long long my_get_longlong_nbr(char const *str)
 {
     int i = 0;

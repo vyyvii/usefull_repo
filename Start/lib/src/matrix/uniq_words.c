@@ -1,10 +1,8 @@
 /*
 ** EPITECH PROJECT, 2026
-** str_to_word_array
+** UtilisLib
 ** File description:
-** Put every unique word of a string into a new allocated array, where each
-** cell represent a word. A word is delimited by space or tab and is composed
-** by only upper or lower case.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
@@ -18,6 +16,18 @@ int not_in_array(char **new_array, char *str)
     return 1;
 }
 
+/**
+ * @ingroup matrix
+ * @brief Put every unique word of a string into a new allocated array,
+ * where each cell represent a word.
+ * A word is composed by only upper or lower case.
+ * @param array The array of strings (NULL terminated).
+ * @param is_reverse If the sort must be done in alphabetical
+ * order (1) or not (-1).
+ * @return Nothing.
+ * @note Complexity: O(n²)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char **uniq_words(char *str)
 {
     char **array = str_to_word_array(str);

@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strcapitalize
+** UtilisLib
 ** File description:
-** Capitalize the first letter of each word in the string.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
@@ -14,6 +14,15 @@ static int ltr(char c)
     return 0;
 }
 
+/**
+ * @ingroup str
+ * @brief Capitalizes the first letter of each word, makes others lowercase.
+ * @param str Modifiable string.
+ * @return Pointer to str.
+ * @note Complexity: O(n)
+ * @note Words are delimited by non-alphanumeric characters.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *my_strcapitalize(char *str)
 {
     int i = 0;

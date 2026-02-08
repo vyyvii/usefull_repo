@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strlowcase
+** UtilisLib
 ** File description:
-** Convert all letters of the string to lowercase in place.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Converts all letters to lowercase in-place.
+ * @param str Modifiable string.
+ * @return Pointer to str.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *my_strlowcase(char *str)
 {
     int i = 0;

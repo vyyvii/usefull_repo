@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_str_isalpha
+** UtilisLib
 ** File description:
-** Return 1 when the string contains only ASCII letters, otherwise 0.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Tests if the string contains only letters A-Z/a-z.
+ * @param str String.
+ * @return 1 if alphabetic only, otherwise 0.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_str_isalpha(char const *str)
 {
     while (*str) {

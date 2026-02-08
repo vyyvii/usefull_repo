@@ -1,13 +1,11 @@
 /*
 ** EPITECH PROJECT, 2026
-** G-CPE-110-LYN-1-1-organized-27
+** UtilisLib
 ** File description:
-** Read an entire file into a newly allocated buffer (open/read/close).
-** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (open, read, close)
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
-#include <fcntl.h>
 
 static int buffer_realoc(size_t *tot, size_t len, size_t read_size,
     char **buffer)
@@ -44,6 +42,17 @@ static int file_runner(int fd, size_t *tot, char **buffer)
     return SUCCESS;
 }
 
+/**
+ * @ingroup mem
+ * @brief Reads a whole file into memory.
+ * @param file File path.
+ * @return Allocated buffer containing the content (terminated by '\0'),
+ * or NULL on error.
+ * @note Complexity: O(file size)
+ * @note Ownership: The caller must `free` the buffer.
+ * @note Part of UtilsLib by Victor Defauchy.
+ * @warning Uses open(2), read(2), close(2).
+ */
 char *open_file(char *file)
 {
     int fd = open(file, O_RDONLY);

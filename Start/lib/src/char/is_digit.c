@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** is_digit
+** UtilisLib
 ** File description:
-** Return 1 if the character is a decimal digit, otherwise 0.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup char
+ * @brief Tests if a character is a digit ('0'..'9').
+ * @param c Character to test.
+ * @return 1 if digit, 0 otherwise.
+ * @note Complexity: O(1)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int is_digit(char c)
 {
     if (c >= '0' && c <= '9')

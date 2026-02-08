@@ -1,12 +1,21 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strcpy
+** UtilisLib
 ** File description:
-** Copy a null-terminated source string into the destination buffer.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup mem
+ * @brief Copies src into dest (including '\0').
+ * @param dest Destination buffer (large enough).
+ * @param src Source string.
+ * @return Pointer to dest.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *my_strcpy(char *dest, char const *src)
 {
     int i = 0;

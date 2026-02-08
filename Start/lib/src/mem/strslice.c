@@ -1,12 +1,23 @@
 /*
 ** EPITECH PROJECT, 2026
-** G-CPE-110-LYN-1-1-organized-27
+** UtilisLib
 ** File description:
-** Return a newly allocated substring between the given indexes.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup mem
+ * @brief Extracts a substring [from, to) into a new allocation.
+ * @param str Source.
+ * @param from Start index (inclusive, clamped to 0).
+ * @param to End index (exclusive, clamped to |str|).
+ * @return New string, or NULL if from>=to or allocation fails.
+ * @note Complexity: O(to - from)
+ * @note Ownership: The caller must `free` the result.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *strslice(char *str, int from, int to)
 {
     char *out;

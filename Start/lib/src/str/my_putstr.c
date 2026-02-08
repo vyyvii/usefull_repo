@@ -1,19 +1,25 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_putstr
+** UtilisLib
 ** File description:
-** Print a null-terminated string to stdout, character by character.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
-int my_putstr(char const *str)
+/**
+ * @ingroup str
+ * @brief Prints a string to stdout.
+ * @param str Null-terminated string.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+void my_putstr(char const *str)
 {
     if (!str)
-        return FAILURE;
+        return;
     while (*str != '\0') {
         my_putchar(*str);
         str++;
     }
-    return SUCCESS;
 }

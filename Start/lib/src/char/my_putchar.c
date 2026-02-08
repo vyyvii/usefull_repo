@@ -1,13 +1,21 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_putchar
+** UtilisLib
 ** File description:
-** Write a single character to standard output.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
-#include <unistd.h>
 
+/**
+ * @ingroup char
+ * @brief Writes a character to stdout.
+ * @param c Character to write.
+ * @return Nothing.
+ * @note Complexity: O(1)
+ * @note Uses write(2).
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 void my_putchar(char c)
 {
     write(1, &c, 1);

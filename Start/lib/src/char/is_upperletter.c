@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** is_upperletter
+** UtilisLib
 ** File description:
-** Return 1 if the character is an upper letter, otherwise 0.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup char
+ * @brief Tests if a character is an uppercase letter (A-Z).
+ * @param c Character to test.
+ * @return 1 if uppercase, 0 otherwise.
+ * @note Complexity: O(1)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int is_upperletter(char c)
 {
     if (c >= 'A' && c <= 'Z')

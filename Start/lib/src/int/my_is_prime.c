@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_is_prime
+** UtilisLib
 ** File description:
-** Check if a number is prime (returns 1 if prime, else 0).
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup int
+ * @brief Tests if an integer is prime.
+ * @param nb Integer to test.
+ * @return 1 if prime, 0 otherwise.
+ * @note Complexity: Approximately O(sqrt(n)).
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_is_prime(int nb)
 {
     if (nb <= 1)

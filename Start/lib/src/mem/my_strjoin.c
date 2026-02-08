@@ -1,12 +1,22 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strjoin
+** UtilisLib
 ** File description:
-** Allocate and return the concatenation of two strings.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup mem
+ * @brief Concatenates two strings into a newly allocated string.
+ * @param s1 First string.
+ * @param s2 Second string.
+ * @return New string s1+s2, or NULL if allocation fails.
+ * @note Complexity: O(|s1| + |s2|)
+ * @note Ownership: The caller must `free` the result.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *my_strjoin(char const *s1, char const *s2)
 {
     int len1 = my_strlen(s1);

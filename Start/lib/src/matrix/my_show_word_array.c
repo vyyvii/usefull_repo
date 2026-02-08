@@ -1,13 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_show_word_array
+** UtilisLib
 ** File description:
-** Print each string of a NULL-terminated array on its own line.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
-#include <stdlib.h>
 
+/**
+ * @ingroup matrix
+ * @brief Prints an array of words, one per line, ending with '\n'.
+ * @param tab NULL-terminated array.
+ * @return 0.
+ * @note Complexity: O(total characters)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_show_word_array(char *const *tab)
 {
     int i = 0;

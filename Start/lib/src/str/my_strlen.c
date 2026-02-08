@@ -1,12 +1,21 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strlen
+** UtilisLib
 ** File description:
-** Count the number of characters in a null-terminated string.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Returns the length of a string (excluding '\0').
+ * @param str String.
+ * @return Number of characters.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ * @pre str != NULL.
+ */
 int my_strlen(char const *str)
 {
     int len = 0;

@@ -1,12 +1,21 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_put_nbr.c
+** UtilisLib
 ** File description:
-** Display an integer on stdout, handling the full int range.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup int_str
+ * @brief Prints an integer to stdout without newline.
+ * @param nb Integer to print.
+ * @return 0.
+ * @note Complexity: O(log10 n)
+ * @note Uses recursion to print digits.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_put_nbr(int nb)
 {
     long value = nb;

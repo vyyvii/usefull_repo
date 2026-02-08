@@ -1,13 +1,21 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strstr
+** UtilisLib
 ** File description:
-** Locate a substring within a string (strstr behavior).
+** The useful lib of VictorDfc
 */
 
-#include <stddef.h>
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Searches the first occurrence of to_find in str (like strstr).
+ * @param str Search string.
+ * @param to_find Pattern.
+ * @return Pointer to the beginning of the occurrence, or NULL if not found.
+ * @note Complexity: O(n*m) in the worst case.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *my_strstr(char *str, char const *to_find)
 {
     int needle_len = my_strlen(to_find);

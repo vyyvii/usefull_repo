@@ -1,13 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_str_isprintable
+** UtilisLib
 ** File description:
-** Return 1 when the string contains only printable ASCII characters,
-** otherwise 0.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Tests if the string contains only printable characters (32..126).
+ * @param str String.
+ * @return 1 if printable only, otherwise 0.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_str_isprintable(char const *str)
 {
     while (*str) {

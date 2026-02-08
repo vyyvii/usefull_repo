@@ -1,12 +1,21 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strdup
+** UtilisLib
 ** File description:
-** Duplicate a string into a newly allocated buffer.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup mem
+ * @brief Duplicates a string into newly allocated memory.
+ * @param str Source.
+ * @return Allocated copy, or NULL if allocation fails.
+ * @note Complexity: O(n)
+ * @note Ownership: The caller must `free` the result.
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *my_strdup(char const *str)
 {
     int len = my_strlen(str);

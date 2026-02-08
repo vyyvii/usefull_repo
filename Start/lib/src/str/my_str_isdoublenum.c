@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_str_isdoublenum
+** UtilisLib
 ** File description:
-** Return 1 when the string contains only digits and a point, otherwise 0.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
@@ -22,6 +22,14 @@ static int detect_point_minus(char const **str, int *is_point, int *is_minus)
     return 0;
 }
 
+/**
+ * @ingroup str
+ * @brief Tests if the string contains only digits or a point.
+ * @param str String.
+ * @return 1 if numeric double only, otherwise 0.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_str_isdoublenum(char const *str)
 {
     int is_point = 0;

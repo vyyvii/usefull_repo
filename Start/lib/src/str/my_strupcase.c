@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_strupcase
+** UtilisLib
 ** File description:
-** Convert all letters of the string to uppercase in place.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Converts all letters to uppercase in-place.
+ * @param str Modifiable string.
+ * @return Pointer to str.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *my_strupcase(char *str)
 {
     int i = 0;

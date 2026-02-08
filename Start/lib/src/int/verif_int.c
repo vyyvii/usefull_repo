@@ -1,13 +1,23 @@
 /*
 ** EPITECH PROJECT, 2026
-** verif_int
+** UtilisLib
 ** File description:
-** Validate that the string is an integer representation and convert it.
-** WARNING: THIS FUNCTION MAY USE BAN FUNCTIONS ! (atoi)
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup int
+ * @brief Validates that a string represents an integer (optionally signed)
+ * and converts it.
+ * @param number String to validate (may start with '-').
+ * @param result Output: converted integer if valid.
+ * @return 0 on success, 84 if the string is not a valid integer.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ * @warning Does not handle internal spaces; only ASCII digits are accepted.
+ */
 int verif_int(char *number, int *result)
 {
     int len_number = my_strlen(number);

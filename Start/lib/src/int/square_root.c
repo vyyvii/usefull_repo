@@ -1,12 +1,19 @@
 /*
 ** EPITECH PROJECT, 2026
-** square_root
+** UtilisLib
 ** File description:
-** Return the perfect square root of nb, or 0 if nb is not a perfect square.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup int
+ * @brief Perfect integer square root.
+ * @param nb Input integer.
+ * @return r such that r ^ 2 == nb if perfect square, otherwise 0.
+ * @note Complexity: O(sqrt(n))
+ */
 int square_root(int nb)
 {
     if (nb <= 0)

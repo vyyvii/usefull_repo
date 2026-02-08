@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_revstr
+** UtilisLib
 ** File description:
-** Reverse a string in place.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup str
+ * @brief Reverses a string in-place.
+ * @param str Modifiable string.
+ * @return Pointer to str.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 char *my_revstr(char *str)
 {
     int compteur = 0;

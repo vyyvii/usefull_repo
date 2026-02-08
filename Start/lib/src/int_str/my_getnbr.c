@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_getnbr
+** UtilisLib
 ** File description:
-** Parse an int from a string with basic overflow guard.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
@@ -20,6 +20,16 @@ static int go_in_number(long *result, const char *str, int i, int sign)
     return 1;
 }
 
+/**
+ * @ingroup int_str
+ * @brief Converts a string to an integer (with sign, ignores leading spaces).
+ * @param str Source string.
+ * @return Converted integer, 0 on overflow or invalid input.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ * @warning Returns 0 both for value 0 and for overflow;
+ * distinguish via external validation.
+ */
 int my_getnbr(const char *str)
 {
     int i = 0;

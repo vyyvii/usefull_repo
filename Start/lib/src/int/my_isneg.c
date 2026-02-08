@@ -1,12 +1,20 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_isneg
+** UtilisLib
 ** File description:
-** Return 1 if the integer is negative, otherwise 0.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup int
+ * @brief Returns 1 if n is negative, 0 otherwise.
+ * @param n Integer.
+ * @return 1 if n is negative, 0 otherwise.
+ * @note Complexity: O(1)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
 int my_isneg(int n)
 {
     if (n >= 0)

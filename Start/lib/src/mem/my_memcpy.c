@@ -1,12 +1,23 @@
 /*
 ** EPITECH PROJECT, 2026
-** my_memcpy
+** UtilisLib
 ** File description:
-** Copy a memory block of the given size from src to dest.
+** The useful lib of VictorDfc
 */
 
 #include "utilslib.h"
 
+/**
+ * @ingroup mem
+ * @brief Copies n bytes from src to dest (like memcpy, no overlap handling).
+ * @param dest Destination.
+ * @param src Source.
+ * @param n Number of bytes to copy.
+ * @return dest pointer.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ * @pre Non-overlapping regions or undefined behavior.
+ */
 void *my_memcpy(void *dest, const void *src, size_t size)
 {
     unsigned char *d = dest;
