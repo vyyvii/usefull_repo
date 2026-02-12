@@ -101,6 +101,7 @@ long long my_get_longlong_nbr(char const *str);
 int my_put_nbr(int nb);
 int verif_int(char *number, int *result);
 int verif_double(char *number, double *result);
+int get_precision(char *number);
 
 /* ============================================================
 ** STR
@@ -120,7 +121,6 @@ char *my_strupcase(char *str);
 
 int my_str_is_only_space(char *str);
 int my_str_isalpha(char const *str);
-int my_str_isalphanumeric(char const *str);
 int my_str_islower(char const *str);
 int my_str_isupper(char const *str);
 int my_str_isnum(char const *str);
