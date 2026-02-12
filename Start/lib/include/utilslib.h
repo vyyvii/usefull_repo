@@ -89,7 +89,6 @@ int my_find_prime_sup(int nb);
 int my_is_prime(int nb);
 int my_isneg(int n);
 void my_sort_int_array(int *array, int size);
-int verif_int(char *number, int *result);
 int square_root(int nb);
 
 /* ============================================================
@@ -100,6 +99,8 @@ int my_getnbr(char const *str);
 double my_get_double_nbr(char const *str);
 long long my_get_longlong_nbr(char const *str);
 int my_put_nbr(int nb);
+int verif_int(char *number, int *result);
+int verif_double(char *number, double *result);
 
 /* ============================================================
 ** STR
@@ -122,7 +123,6 @@ int my_str_isalpha(char const *str);
 int my_str_islower(char const *str);
 int my_str_isupper(char const *str);
 int my_str_isnum(char const *str);
-int my_str_isdoublenum(char const *str);
 int my_str_isprintable(char const *str);
 
 int my_strcmp(char const *s1, char const *s2);

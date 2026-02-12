@@ -77,6 +77,7 @@ int is_letter(char c);
 int is_lowerletter(char c);
 int is_upperletter(char c);
 void my_putchar(char c);
+void my_putchar_error(char c);
 
 /* ============================================================
 ** INT
@@ -88,7 +89,6 @@ int my_find_prime_sup(int nb);
 int my_is_prime(int nb);
 int my_isneg(int n);
 void my_sort_int_array(int *array, int size);
-int verif_int(char *number, int *result);
 int square_root(int nb);
 
 /* ============================================================
@@ -99,6 +99,8 @@ int my_getnbr(char const *str);
 double my_get_double_nbr(char const *str);
 long long my_get_longlong_nbr(char const *str);
 int my_put_nbr(int nb);
+int verif_int(char *number, int *result);
+int verif_double(char *number, double *result);
 
 /* ============================================================
 ** STR
@@ -108,6 +110,7 @@ int contains_char(char *str, char c);
 int count_char(char *str, char c);
 
 void my_putstr(char const *str);
+void my_putstr_error(char const *str);
 int my_strlen(char const *str);
 
 char *my_revstr(char *str);
@@ -120,7 +123,6 @@ int my_str_isalpha(char const *str);
 int my_str_islower(char const *str);
 int my_str_isupper(char const *str);
 int my_str_isnum(char const *str);
-int my_str_isdoublenum(char const *str);
 int my_str_isprintable(char const *str);
 
 int my_strcmp(char const *s1, char const *s2);

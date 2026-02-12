@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup int
+ * @ingroup int_str
  * @brief Validates that a string represents an integer (optionally signed)
  * and converts it.
  * @param number String to validate (may start with '-').
