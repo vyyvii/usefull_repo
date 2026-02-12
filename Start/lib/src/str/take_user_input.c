@@ -17,8 +17,8 @@
 char *take_user_input(void)
 {
     size_t size = 0;
-    ssize_t len;
-    char *input;
+    ssize_t len = 0;
+    char *input = NULL;
 
     len = getline(&input, &size, stdin);
     if (len == -1)
