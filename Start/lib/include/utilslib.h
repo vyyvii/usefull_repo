@@ -151,7 +151,7 @@ char **str_to_array(char *str);
 char **uniq_words(char *str);
 void alpha_sort(char **array, int is_reverse);
 
-char **str_to_matrice(char *str, int nb_lines, char delim);
+char **str_to_matrice(char *str, char *delims);
 char **str_to_word_array(char *str);
 char **str_to_word_array_space(char *str);
 
