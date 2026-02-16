@@ -16,11 +16,20 @@ static int is_delim(char c, char *delims)
     return 0;
 }
 
-static int next_word_start(char *str, char *delims, int i)
+static int next_word(char *str, char *delims, int i)
 {
     while (str[i] && is_delim(str[i], delims))
         i++;
     return i;
+}
+
+static int word_length(char *str, char *delims, int i)
+{
+    int len = 0;
+
+    while (str[i + len] && !is_delim(str[i + len], delims))
+        len++;
+    return len;
 }
 
 static char *duplicate_word(char *str, int start, int len)
@@ -34,49 +43,40 @@ static char *duplicate_word(char *str, int start, int len)
     return res;
 }
 
-static int word_length(char *str, char *delims, int i)
-{
-    int len = 0;
-
-    while (str[i + len] && !is_delim(str[i + len], delims))
-        len++;
-    return len;
-}
-
-static int fill_words(char *str, char *delims, char **array)
-{
-    int i = 0;
-    int index = 0;
-    int len;
-
-    while (str[i]) {
-        i = next_word_start(str, delims, i);
-        if (str[i])
-            break;
-        len = word_length(str, delims, i);
-        array[index] = duplicate_word(str, i, len);
-        if (!array[index])
-            return FAILURE;
-        index++;
-        i += len;
-    }
-    array[index] = NULL;
-    return SUCCESS;
-}
-
-static int count_nb_words(char *str, char *delims)
+static int count_words(char *str, char *delims)
 {
     int count = 0;
     int i = 0;
 
     while (str[i]) {
-        i = next_word_start(str, delims, i);
-        if (str[i])
+        i = next_word(str, delims, i);
+        if (str[i] == '\0')
             break;
         count++;
         i += word_length(str, delims, i);
     }
     return count;
+}
+
+static int fill_words(char *str, char *delims, char **array)
+{
+    int i = 0;
+    int j = 0;
+    int len;
+
+    while (str[i]) {
+        i = next_word(str, delims, i);
+        if (str[i] == '\0')
+            break;
+        len = word_length(str, delims, i);
+        array[j] = duplicate_word(str, i, len);
+        if (!array[j])
+            return -1;
+        j++;
+        i += len;
+    }
+    array[j] = NULL;
+    return 0;
 }
 
 /**
@@ -95,11 +95,11 @@ char **str_to_matrice(char *str, char *delims)
 
     if (!str || !delims)
         return NULL;
-    word_count = count_nb_words(str, delims);
+    word_count = count_words(str, delims);
     array = malloc(sizeof(char *) * (word_count + 1));
     if (!array)
         return NULL;
-    if (fill_words(str, delims, array) == FAILURE) {
+    if (fill_words(str, delims, array) == -1) {
         for (int i = 0; array[i]; i++)
             free(array[i]);
         free(array);
