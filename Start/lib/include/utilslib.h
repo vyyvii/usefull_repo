@@ -78,6 +78,7 @@ int is_lowerletter(char c);
 int is_upperletter(char c);
 void my_putchar(char c);
 void my_putchar_error(char c);
+int nb_chars(char *str, char c);
 
 /* ============================================================
 ** INT
@@ -99,6 +100,7 @@ int my_getnbr(char const *str);
 double my_get_double_nbr(char const *str);
 long long my_get_longlong_nbr(char const *str);
 int my_put_nbr(int nb);
+int my_put_nbr_err(int nb);
 int verif_int(char *number, int *result);
 int verif_double(char *number, double *result);
 int get_precision(char *number);

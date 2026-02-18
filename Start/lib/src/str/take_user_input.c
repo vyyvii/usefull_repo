@@ -21,9 +21,11 @@ char *take_user_input(void)
     char *input = NULL;
 
     len = getline(&input, &size, stdin);
-    if (len == -1)
+    if (len == -1) {
+        if (input)
+            free(input);
         return NULL;
-    else if (len > 0 && input[len - 1] == '\n')
+    } else if (len > 0 && input[len - 1] == '\n')
         input[len - 1] = '\0';
     return input;
 }
