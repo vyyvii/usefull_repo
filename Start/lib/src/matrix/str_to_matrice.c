@@ -38,7 +38,7 @@ static char *duplicate_word(char *str, int start, int len)
 
     if (!res)
         return NULL;
-    strncpy(res, str + start, len);
+    my_strncpy(res, str + start, len);
     res[len] = '\0';
     return res;
 }

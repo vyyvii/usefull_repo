@@ -17,16 +17,17 @@
  * @note Complexity: O(n)
  * @note Part of UtilsLib by Victor Defauchy.
  */
-char *my_strncpy(char *dest, char const *src, size_t size)
+char *my_strncpy(char *dest, const char *src, size_t n)
 {
     size_t i = 0;
 
-    if (size == 0)
-        return dest;
-    while (i + 1 < size && src[i]) {
+    while (i < n && src[i]) {
         dest[i] = src[i];
         i++;
     }
-    dest[i] = '\0';
+    while (i < n) {
+        dest[i] = '\0';
+        i++;
+    }
     return dest;
 }
