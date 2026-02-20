@@ -2,9 +2,10 @@
 
 success=0
 fail=0
-try=2
+try=0
 
 # HELP
+((try++))
 if diff <(./functional_tests -h) "tests/answers/help" > /dev/null; then
     echo "Help message : OK"
     ((success++))
@@ -13,6 +14,7 @@ else
     ((fail++))
 fi
 
+((try++))
 ./functional_tests -h
 if [ $? -eq 0 ]; then
     echo "Help exit code : OK"
@@ -26,4 +28,4 @@ fi
 # BASICS
 # SCORE
 score=$(( success * 100 / $try))
-echo "Try: $try/$try ; successs: $success/$try ; Fails: $fail/$try ; Percent: $score%"
+echo "Try: $try ; successs: $success/$try ; Fails: $fail/$try ; Percent: $score%"

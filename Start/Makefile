@@ -8,7 +8,7 @@
 # ─────────────────────────────────────────────────────────────
 # PHONY TARGETS
 # ─────────────────────────────────────────────────────────────
-.PHONY: all clean fclean re unit_tests tests_run functional_tests compile_lib compile_lib_all
+.PHONY: all clean fclean re unit_tests functional_tests tests_run compile_lib compile_lib_all
 
 # ─────────────────────────────────────────────────────────────
 # NAME

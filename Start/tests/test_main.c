@@ -25,7 +25,7 @@ char *capture_stdout(void (*func)(void))
     size = read(pipefd[0], buffer, sizeof(buffer) - 1);
     close(pipefd[0]);
     buffer[size] = '\0';
-    return strdup(buffer);
+    return my_strdup(buffer);
 }
 
 int main(void)
