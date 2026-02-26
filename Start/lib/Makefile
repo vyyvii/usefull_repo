@@ -6,9 +6,66 @@
 ##
 
 .PHONY: all clean fclean re
-
-SRC = $(shell find src -name '*.c')
-OBJ := $(patsubst %.c,%.o,$(SRC))
+SRC = 	src/char/is_digit.c \
+		src/char/is_letter.c \
+		src/char/is_lowerletter.c \
+		src/char/is_upperletter.c \
+		src/char/my_putchar.c \
+		src/char/nb_char.c \
+		src/int/my_find_prime_sup.c \
+		src/int/my_is_prime.c \
+		src/int/my_isneg.c \
+		src/int/my_power_double.c \
+		src/int/my_power.c \
+		src/int/my_sort_int_array.c \
+		src/int/square_root.c \
+		src/int_str/get_precision.c \
+		src/int_str/my_get_double_nbr.c \
+		src/int_str/my_get_longlong_nbr.c \
+		src/int_str/my_getnbr.c \
+		src/int_str/my_put_nbr.c \
+		src/int_str/verif_double.c \
+		src/int_str/verif_int.c \
+		src/matrix/ac.c \
+		src/matrix/alpha_sort.c \
+		src/matrix/count_lines.c \
+		src/matrix/my_show_word_array.c \
+		src/matrix/str_to_array.c \
+		src/matrix/str_to_matrice.c \
+		src/matrix/str_to_word_array_space.c \
+		src/matrix/str_to_word_array.c \
+		src/matrix/uniq_words.c \
+		src/mem/free_table.c \
+		src/mem/my_memcpy.c \
+		src/mem/my_strcpy.c \
+		src/mem/my_strdup.c \
+		src/mem/my_strncpy.c \
+		src/mem/my_swap.c \
+		src/mem/open_file.c \
+		src/mem/strslice.c \
+		src/mem/my_strjoin_three.c \
+		src/mem/my_strjoin.c \
+		src/mem/putcat.c \
+		src/str/count_contains_char.c \
+		src/str/my_putstr.c \
+		src/str/my_revstr.c \
+		src/str/my_str_is_only_space.c \
+		src/str/my_str_isalpha.c \
+		src/str/my_str_isalphanumeric.c \
+		src/str/my_str_islower.c \
+		src/str/my_str_isnum.c \
+		src/str/my_str_isprintable.c \
+		src/str/my_str_isupper.c \
+		src/str/my_strcapitalize.c \
+		src/str/my_strcmp_no_case.c \
+		src/str/my_strcmp.c \
+		src/str/my_strlen.c \
+		src/str/my_strncmp.c \
+		src/str/my_strstr.c \
+		src/str/my_strupcase.c \
+		src/str/my_strlowcase.c \
+		src/str/take_user_input.c
+OBJ := 	$(patsubst %.c,%.o,$(SRC))
 
 CC = epiclang
 CFLAGS = -Wall -Wextra -g3 -Iinclude -O0
