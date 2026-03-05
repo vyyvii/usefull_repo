@@ -7,17 +7,12 @@
 
 #include "utilslib.h"
 
-static int detect_point_minus(char *number, int *i, int *is_point,
-    int *is_minus)
+static int detect_point_minus(char *number, int *i, int *is_point)
 {
-    if (number[*i] == '.' && !(*is_point)) {
+    if (number[*i] == '.' && !(*is_point) && *i != 0
+        && is_digit(number[*i - 1]) && is_digit(number[*i + 1])) {
         (*i)++;
         *is_point = 1;
-        return 1;
-    }
-    if (number[*i] == '-' && !(*is_minus)) {
-        (*i)++;
-        *is_minus = 1;
         return 1;
     }
     return 0;
@@ -29,7 +24,7 @@ static int detect_point_minus(char *number, int *i, int *is_point,
  * and converts it.
  * @param number String to validate (may start with '-').
  * @param result Output: converted double if valid.
- * @return 0 on success, 84 if the string is not a valid integer.
+ * @return 0 on success, 84 if the string is not a valid double.
  * @note Complexity: O(n)
  * @note Part of UtilsLib by Victor Defauchy.
  * @warning Does not handle internal spaces; only ASCII digits are accepted.
@@ -37,15 +32,19 @@ static int detect_point_minus(char *number, int *i, int *is_point,
 int verif_double(char *number, double *result)
 {
     int is_point = 0;
-    int is_minus = 0;
     int i = 0;
+    int len_nb = my_strlen(number);
 
+    if (len_nb == 0)
+        return FAILURE;
+    if (number[0] == '-' && len_nb > 1)
+        i = 1;
     while (number[i]) {
-        if (number[i] >= 48 && number[i] <= 57) {
+        if (number[i] >= '0' && number[i] <= '9') {
             i++;
             continue;
         }
-        if (detect_point_minus(number, &i, &is_point, &is_minus))
+        if (detect_point_minus(number, &i, &is_point))
             continue;
         return FAILURE;
     }
