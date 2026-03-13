@@ -25,7 +25,7 @@
  *
  * @note Time complexity is indicated when relevant.
  * @author Victor Defauchy
- * @date 06.12.2025
+ * @date 13.03.2026
  */
 
 #ifndef UTILSLIB
