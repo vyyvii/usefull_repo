@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup matrix
+ * @ingroup matrice
  * @brief Sort an array of strings in place.
  * @param array The array of strings (NULL terminated).
  * @param is_reverse If the sort must be done in alphabetical

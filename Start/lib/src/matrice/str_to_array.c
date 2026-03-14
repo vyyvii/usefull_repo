@@ -30,7 +30,7 @@ static int valid_word(int i, char **array, char *str, int *cell)
 }
 
 /**
- * @ingroup matrix
+ * @ingroup matrice
  * @brief Transform a string to an array, whith space or tab as delimiter.
  * @param str String
  * @return A NULL-terminated array, or NULL if allocation fails.

@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup matrix
+ * @ingroup matrice
  * @brief Counts the number of lines based on '\n'.
  * @param str Source string.
  * @return Number of lines (= number of '\n' + 1).

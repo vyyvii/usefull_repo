@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup int
+ * @ingroup maths
  * @brief Tests if an integer is prime.
  * @param nb Integer to test.
  * @return 1 if prime, 0 otherwise.

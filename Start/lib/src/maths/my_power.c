@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup int
+ * @ingroup maths
  * @brief Recursive power in double: computes nb ^ p.
  * @param nb Double base.
  * @param p Exponent (0 returns 1, negative returns 0).

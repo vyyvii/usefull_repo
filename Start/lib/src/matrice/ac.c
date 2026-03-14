@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup matrix
+ * @ingroup matrice
  * @brief Counts the number of arguments in a NULL-terminated array.
  * @param args NULL-terminated array of strings.
  * @return Number of elements before NULL.

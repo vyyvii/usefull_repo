@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup int
+ * @ingroup maths
  * @brief Returns 1 if n is negative, 0 otherwise.
  * @param n Integer.
  * @return 1 if n is negative, 0 otherwise.

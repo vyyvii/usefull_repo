@@ -6,19 +6,21 @@
 ##
 
 .PHONY: all clean fclean re
+
 SRC = 	src/char/is_digit.c \
 		src/char/is_letter.c \
 		src/char/is_lowerletter.c \
 		src/char/is_upperletter.c \
 		src/char/my_putchar.c \
 		src/char/nb_char.c \
-		src/int/my_find_prime_sup.c \
-		src/int/my_is_prime.c \
-		src/int/my_isneg.c \
-		src/int/my_power_double.c \
-		src/int/my_power.c \
-		src/int/my_sort_int_array.c \
-		src/int/square_root.c \
+		src/maths/my_find_prime_sup.c \
+		src/maths/my_is_prime.c \
+		src/maths/my_isneg.c \
+		src/maths/my_power.c \
+		src/maths/my_sort_int_array.c \
+		src/maths/my_factorial.c \
+		src/maths/matrice.c \
+		src/maths/square_root.c \
 		src/int_str/get_precision.c \
 		src/int_str/my_get_double_nbr.c \
 		src/int_str/my_get_longlong_nbr.c \
@@ -26,12 +28,12 @@ SRC = 	src/char/is_digit.c \
 		src/int_str/my_put_nbr.c \
 		src/int_str/verif_double.c \
 		src/int_str/verif_int.c \
-		src/matrix/ac.c \
-		src/matrix/alpha_sort.c \
-		src/matrix/count_lines.c \
-		src/matrix/my_show_word_array.c \
-		src/matrix/str_to_array.c \
-		src/matrix/str_to_matrice.c \
+		src/matrice/ac.c \
+		src/matrice/alpha_sort.c \
+		src/matrice/count_lines.c \
+		src/matrice/my_show_word_array.c \
+		src/matrice/str_to_array.c \
+		src/matrice/str_to_matrice.c \
 		src/mem/free_table.c \
 		src/mem/my_memcpy.c \
 		src/mem/my_strcpy.c \

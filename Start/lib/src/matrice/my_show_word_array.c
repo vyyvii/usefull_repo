@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup matrix
+ * @ingroup matrice
  * @brief Prints an array of words, one per line, ending with '\n'.
  * @param tab NULL-terminated array.
  * @return 0.

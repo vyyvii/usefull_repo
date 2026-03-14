@@ -80,8 +80,8 @@ static int fill_words(char *str, char *delims, char **array)
 }
 
 /**
- * @ingroup matrix
- * @brief Converts a multi-line string into a matrix (char**).
+ * @ingroup matrice
+ * @brief Converts a multi-line string into a matrice (char**).
  * @param str String
  * @param delims The delimiter.
  * @return Array of allocated lines with terminal NULL, or NULL if fail.

@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup int
+ * @ingroup maths
  * @brief Sorts an integer array in ascending order (in-place).
  * @param array Pointer to the first element.
  * @param size Array size.

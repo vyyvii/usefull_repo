@@ -25,11 +25,13 @@
  *
  * @note Time complexity is indicated when relevant.
  * @author Victor Defauchy
- * @date 13.03.2026
+ * @date 14.03.2026
  */
 
 #ifndef UTILSLIB
     #define UTILSLIB
+    #define SUCCESS 0
+    #define FAILURE 84
     #include <stddef.h>
     #include <stdio.h>
     #include <stdlib.h>
@@ -37,19 +39,17 @@
     #include <fcntl.h>
     #include <string.h>
     #include <limits.h>
+    #include <math.h>
     #include <sys/types.h>
     #include <sys/stat.h>
-
-    #define SUCCESS 0
-    #define FAILURE 84
 
 /**
  * @defgroup char Characters
  * @brief Utility functions related to character classification.
  */
 /**
- * @defgroup int Integers
- * @brief Utility functions related to integers.
+ * @defgroup maths Mathematics
+ * @brief Utility functions related to mathematics.
  */
 /**
  * @defgroup int_str Strings ↔ Numbers
@@ -60,7 +60,7 @@
  * @brief Operations on C strings (null-terminated).
  */
 /**
- * @defgroup matrix String matrices
+ * @defgroup matrice String matrices
  * @brief Tools for arrays of strings (char**).
  */
 /**
@@ -81,16 +81,29 @@ void my_putchar_error(char c);
 int nb_chars(char *str, char c);
 
 /* ============================================================
-** INT
+** MATHS
 ** ============================================================ */
 
-int my_power(int nb, int p);
-double my_power_double(double nb, int p);
+typedef struct abcsizeij_s {
+    double **A;
+    double **B;
+    double **C;
+    int i;
+    int j;
+    int sizeB;
+} abcsizeij_t;
+
+double my_power(int nb, int p);
 int my_find_prime_sup(int nb);
 int my_is_prime(int nb);
 int my_isneg(int n);
 void my_sort_int_array(int *array, int size);
-int square_root(int nb);
+double my_sqrt(double nb);
+double **multiplies_two_matrices(double **A, double **B, int sizeA, int sizeB);
+double **divise_matrice(double **A, int sizeA, int divise_by);
+double **construct_matrice(double *A, int sizeA);
+double **identity_matrice(int len);
+double my_factorial(double nb);
 
 /* ============================================================
 ** INT_STR
@@ -148,7 +161,7 @@ char *take_user_input(void);
 char **str_to_array(char *str);
 
 /* ============================================================
-** MATRIX
+** matrice
 ** ============================================================ */
 
 char **uniq_words(char *str);

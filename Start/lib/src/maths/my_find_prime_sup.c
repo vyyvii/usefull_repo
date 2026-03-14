@@ -8,7 +8,7 @@
 #include "utilslib.h"
 
 /**
- * @ingroup int
+ * @ingroup maths
  * @brief Finds the smallest prime number greater than or equal to nb.
  * @param nb Start integer.
  * @return The first prime number >= nb.
