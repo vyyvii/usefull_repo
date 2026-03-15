@@ -100,22 +100,13 @@ int my_is_prime(int nb);
 int my_isneg(int n);
 void my_sort_int_array(int *array, int size);
 double my_sqrt(double nb);
+void print_matrix(double **matrice, int line, int col);
 double **multiplies_two_matrices(double **A, double **B, int sizeA, int sizeB);
 double **add_two_matrices(double **A, double **B, int sizeA, int sizeB);
 double **divise_matrice_by_double(double **A, int sizeA, double divise_by);
 double **construct_matrice(double *A, int sizeA);
 double **identity_matrice(int len);
-int my_factorial(int nb);
-int list_min_int(int *list, int size_list);
-int list_max_int(int *list, int size_list);
-double list_min_float(double *list, int size_list);
-double list_max_float(double *list, int size_list);
-int list_sum_int(int *list, int size_list);
-double list_mean_int(int *list, int size_list);
-double standard_deviation_int(int *list, int size_list);
-double list_sum_float(double *list, int size_list);
-double list_mean_float(double *list, int size_list);
-double standard_deviation_float(double *list, int size_list);
+double my_factorial(int nb);
 
 /* ============================================================
 ** INT_STR

@@ -24,19 +24,19 @@ static void k_level(abcsizeij_t *args)
 /**
  * @ingroup maths
  * @brief Multiply two matrices.
- * @param A First matrix.
- * @param B Second matrix.
- * @param sizeA Number of rows of matrix A (and resulting matrix).
- * @param sizeB Number of columns of matrix B (and resulting matrix).
- * @return A newly allocated matrix containing the result of A * B,
- * or NULL on allocation failure.
- * @note Complexity: O(sizeA * sizeB * sizeB)
+ * @param A The first matrix.
+ * @param B The second matrix.
+ * @param sizeA Number of rows of matrix A.
+ * @param sizeB Number of columns of matrix B.
+ * @return The resulting matrix of the multiplication A * B,
+ * or NULL if allocation fails.
+ * @note Complexity: O(n^3)
  * @note Part of UtilsLib by Victor Defauchy.
  */
 double **multiplies_two_matrices(double **A, double **B, int sizeA, int sizeB)
 {
     double **C = malloc(sizeof(double *) * sizeA);
-    abcsizeij_t args = {0};
+    abcsizeij_t args = { 0 };
 
     for (int i = 0; i < sizeA; i++) {
         C[i] = malloc(sizeof(double) * sizeB);
@@ -60,14 +60,12 @@ double **multiplies_two_matrices(double **A, double **B, int sizeA, int sizeB)
 /**
  * @ingroup maths
  * @brief Add two matrices together.
- * @param A First matrix.
- * @param B Second matrix.
- * @param sizeA Number of rows.
- * @param sizeB Number of columns.
- * @return A newly allocated matrix containing A + B,
- * or NULL if allocation fails
- * or if matrix sizes are incompatible.
- * @note Complexity: O(sizeA * sizeB)
+ * @param A The first matrix.
+ * @param B The second matrix.
+ * @param sizeA Number of rows of the matrices.
+ * @param sizeB Number of columns of the matrices.
+ * @return The resulting matrix of A + B, or NULL if allocation fails.
+ * @note Complexity: O(n^2)
  * @note Part of UtilsLib by Victor Defauchy.
  */
 double **add_two_matrices(double **A, double **B, int sizeA, int sizeB)
@@ -92,11 +90,11 @@ double **add_two_matrices(double **A, double **B, int sizeA, int sizeB)
  * @ingroup maths
  * @brief Divide every element of a matrix by a scalar value.
  * @param A The matrix to divide.
- * @param sizeA Size of the matrix (number of rows and columns).
- * @param divise_by The scalar value used to divide each element.
- * @return A newly allocated matrix containing the result,
- * or NULL on allocation failure.
- * @note Complexity: O(sizeA * sizeA)
+ * @param sizeA The dimension of the square matrix.
+ * @param divise_by The scalar value used as divisor.
+ * @return A new matrix where each element of A is divided by divise_by,
+ * or NULL if allocation fails.
+ * @note Complexity: O(n^2)
  * @note Part of UtilsLib by Victor Defauchy.
  */
 double **divise_matrice_by_double(double **A, int sizeA, double divise_by)
@@ -119,13 +117,13 @@ double **divise_matrice_by_double(double **A, int sizeA, double divise_by)
 
 /**
  * @ingroup maths
- * @brief Construct a square matrix from a linear array.
- * @param A The array containing the matrix values.
- * @param sizeA Number of elements in the array.
- * @return A newly allocated square matrix containing the values of A,
- * padded with 0.0 if necessary, or NULL on allocation failure.
- * @note The size of the matrix is determined by sqrt(sizeA).
- * @note Complexity: O(sizeA)
+ * @brief Construct a square matrix from a linear array of coefficients.
+ * @param A The array containing the coefficients.
+ * @param sizeA The number of coefficients in the array.
+ * @return A newly allocated square matrix filled row by row,
+ * or NULL if allocation fails.
+ * @note The size of the matrix is determined using sqrt(sizeA).
+ * @note Complexity: O(n^2)
  * @note Part of UtilsLib by Victor Defauchy.
  */
 double **construct_matrice(double *A, int sizeA)
@@ -143,7 +141,7 @@ double **construct_matrice(double *A, int sizeA)
             return NULL;
         }
         for (int j = 0; j < size; j++) {
-            matrice[i][j] = (k >= sizeA) ? A[k] : 0.0;
+            matrice[i][j] = (k < sizeA) ? A[k] : 0.0;
             k++;
         }
     }
@@ -153,15 +151,14 @@ double **construct_matrice(double *A, int sizeA)
 /**
  * @ingroup maths
  * @brief Create an identity matrix.
- * @param len Number of elements corresponding to the squared matrix size.
- * @return A newly allocated identity matrix, or NULL on allocation failure.
- * @note The matrix dimension is determined by sqrt(len).
- * @note Complexity: O(n²)
+ * @param size The dimension of the square matrix.
+ * @return A size x size identity matrix, or NULL if allocation fails.
+ * @note The identity matrix contains 1.0 on the diagonal and 0.0 elsewhere.
+ * @note Complexity: O(n^2)
  * @note Part of UtilsLib by Victor Defauchy.
  */
-double **identity_matrice(int len)
+double **identity_matrice(int size)
 {
-    int size = (int)my_sqrt((double)len);
     double **matrice = malloc(sizeof(double *) * size);
 
     if (!matrice)

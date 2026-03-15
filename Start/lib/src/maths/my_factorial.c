@@ -15,7 +15,7 @@
  * @note COmplexity: log(nb)
  * @note Part of UtilsLib by Victor Defauchy.
  */
-int my_factorial(int nb)
+double my_factorial(int nb)
 {
-    return (nb == 0) ? 1 : nb * my_factorial(nb - 1);
+    return (nb <= 1) ? 1 : (double)nb * my_factorial(nb - 1);
 }

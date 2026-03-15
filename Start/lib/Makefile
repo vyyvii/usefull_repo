@@ -21,9 +21,7 @@ SRC = 	src/char/is_digit.c \
 		src/maths/my_factorial.c \
 		src/maths/matrice.c \
 		src/maths/square_root.c \
-		src/maths/list_operations_int.c \
-		src/maths/list_operations_float.c \
-		src/maths/list_min_max.c \
+		src/maths/print_matrice.c \
 		src/int_str/get_precision.c \
 		src/int_str/my_get_double_nbr.c \
 		src/int_str/my_get_longlong_nbr.c \
