@@ -43,7 +43,13 @@
     #include <math.h>
     #include <sys/types.h>
     #include <sys/stat.h>
+    #include <stdbool.h>
+    #include <stdbool.h>
 
+/**
+ * @defgroup bool Booleans
+ * @brief Utility functions related to booleans classification.
+ */
 /**
  * @defgroup char Characters
  * @brief Utility functions related to character classification.
@@ -68,6 +74,13 @@
  * @defgroup mem Memory and I/O
  * @brief Low-level memory tools and file reading.
  */
+
+/* ============================================================
+** BOOL
+** ============================================================ */
+
+bool get_bool(char *type);
+char *give_bool(bool type);
 
 /* ============================================================
 ** CHAR
@@ -110,6 +123,16 @@ double **construct_matrice(double *A, int sizeA);
 double **identity_matrice(int len);
 double **dup_matrice(double **A, int size);
 double my_factorial(int nb);
+int list_min_int(int *list, int size_list);
+int list_max_int(int *list, int size_list);
+double list_min_float(double *list, int size_list);
+double list_max_float(double *list, int size_list);
+int list_sum_int(int *list, int size_list);
+double list_mean_int(int *list, int size_list);
+double standard_deviation_int(int *list, int size_list);
+double list_sum_float(double *list, int size_list);
+double list_mean_float(double *list, int size_list);
+double standard_deviation_float(double *list, int size_list);
 
 /* ============================================================
 ** INT_STR

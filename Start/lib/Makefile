@@ -65,7 +65,8 @@ SRC = 	src/char/is_digit.c \
 		src/str/my_strstr.c \
 		src/str/my_strupcase.c \
 		src/str/my_strlowcase.c \
-		src/str/take_user_input.c
+		src/str/take_user_input.c \
+		src/bool/get_bool.c
 OBJ := 	$(patsubst %.c,%.o,$(SRC))
 
 CC = epiclang
