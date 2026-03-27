@@ -46,7 +46,7 @@ char **str_to_array(char *str)
 
     if (!str || !array || my_str_is_only_space(str)) {
         if (array)
-            free_table((void **)array);
+            free(array);
         return NULL;
     }
     while (str[i]) {

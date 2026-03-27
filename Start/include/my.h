@@ -8,6 +8,7 @@
 #ifndef project
     #define project
     #define SUCCESS 0
+    #define OK 1
     #define FAILURE 84
     #include "utilslib.h"
 

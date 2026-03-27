@@ -7,11 +7,11 @@ read -rp "Description: " description
 repo_name=$(basename $url .git)
 name_upper=$(printf "%s" "$name" | tr '[:lower:]' '[:upper:]')
 
-cd ~/delivery
+cd ~/work
 git clone $url
 cd $repo_name
-cp -r ~/delivery/usefull_repo/Start/* .
-cp ~/delivery/usefull_repo/Start/.gitignore .
+cp -r ~/work/useful_repo/Start/* .
+cp ~/work/useful_repo/Start/.gitignore .
 mv src/project.c src/$name.c
 find . -type f -exec sed -i -E \
   -e 's/EPITECH PROJECT/__EPITECH_PROTECTED__/g' \

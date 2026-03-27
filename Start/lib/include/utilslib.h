@@ -153,6 +153,7 @@ int get_precision(char *number);
 
 int contains_char(char *str, char c);
 int count_char(char *str, char c);
+int index_char(char *str, char c);
 
 void my_putstr(char const *str);
 void my_putstr_error(char const *str);

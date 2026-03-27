@@ -9,6 +9,25 @@
 
 /**
  * @ingroup str
+ * @brief Give the first occurence of c in str.
+ * @param str String
+ * @param c Character to test.
+ * @return The index of the first occurence of c in str,
+ * len of str if c is not in str.
+ * @note Complexity: O(n)
+ * @note Part of UtilsLib by Victor Defauchy.
+ */
+int index_char(char *str, char c)
+{
+    for (int i = 0; str[i]; i++) {
+        if (str[i] == c)
+            return i;
+    }
+    return my_strlen(str);
+}
+
+/**
+ * @ingroup str
  * @brief Tell if the string contain the char.
  * @param str String
  * @param c Character to test.

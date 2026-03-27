@@ -9,5 +9,5 @@
 
 int project_(int ac, char **av)
 {
-    return 0;
+    return SUCCESS;
 }
