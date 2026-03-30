@@ -55,7 +55,7 @@ static char ***line_runner(dataframe_t *df, char **file)
     if (!data)
         return NULL;
     for (int i = 0; i < df->nb_rows; i++) {
-        tmp = str_to_matrice(file[i + 1], df->separator);
+        tmp = str_to_matrice(file[i + (df->no_head ? 0 : 1)], df->separator);
         if (!tmp) {
             free_partial_csv(data, curr);
             return NULL;
@@ -105,7 +105,7 @@ static void nb_col_lines(dataframe_t *df, char **file)
     int sep_len = strlen(df->separator);
     int j = 0;
 
-    for (int i = 1; file[i]; i++)
+    for (int i = (df->no_head ? 0 : 1); file[i]; i++)
         df->nb_rows++;
     while (file[0][j]) {
         if (strncmp(&file[0][j], df->separator, sep_len) == 0) {
@@ -117,11 +117,13 @@ static void nb_col_lines(dataframe_t *df, char **file)
     df->nb_columns++;
 }
 
-static int set_df(dataframe_t *df, char **file, const char *separator)
+static int set_df(dataframe_t *df, char **file, const char *separator,
+    int no_head)
 {
     df->separator = (separator) ? strdup(separator) : strdup(",");
     if (!df->separator)
         return FAILURE;
+    df->no_head = no_head;
     df->nb_rows = 0;
     df->nb_columns = 0;
     nb_col_lines(df, file);
@@ -161,7 +163,8 @@ static char **open_csv(char *file_path)
  * @note Part of UtilsLib by Victor Defauchy.
  * @pre filename must be a valid path to a readable file.
  */
-dataframe_t *df_read_csv(const char *filename, const char *separator)
+dataframe_t *df_read_csv(const char *filename, const char *separator,
+    int no_head)
 {
     char **file = open_csv((char *)filename);
     dataframe_t *df = (file) ? malloc(sizeof(dataframe_t)) : NULL;
@@ -171,7 +174,7 @@ dataframe_t *df_read_csv(const char *filename, const char *separator)
             free_table((void **)file);
         return NULL;
     }
-    if (set_df(df, file, separator) == FAILURE) {
+    if (set_df(df, file, separator, no_head) == FAILURE) {
         free_table((void **)file);
         free(df);
         return NULL;

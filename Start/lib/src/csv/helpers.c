@@ -76,3 +76,18 @@ void free_partial_csv(char ***data, int n)
     }
     free(data);
 }
+
+void df_free(dataframe_t *dataframe)
+{
+    if (!dataframe)
+        return;
+    if (dataframe->separator)
+        free(dataframe->separator);
+    if (dataframe->column_types)
+        free(dataframe->column_types);
+    if (dataframe->column_names)
+        free_table((void **)dataframe->column_names);
+    if (dataframe->data)
+        free_csv(dataframe->data);
+    free(dataframe);
+}

@@ -242,16 +242,19 @@ typedef enum {
 typedef struct {
     int nb_rows;
     int nb_columns;
+    int no_head;
     char **column_names;
     column_type_t *column_types;
     char ***data;
     char *separator;
 } dataframe_t;
 
-dataframe_t *df_read_csv(const char *filename, const char *separator);
+dataframe_t *df_read_csv(const char *filename, const char *separator,
+    int no_head);
 int df_write_csv(dataframe_t *dataframe, const char *filename);
 char **copie_heads(dataframe_t *df);
 void free_csv(char ***data);
 void free_partial_csv(char ***data, int n);
+void df_free(dataframe_t *dataframe);
 
 #endif /* !UTILSLIB */
