@@ -223,8 +223,8 @@ void *my_memset(void *ptr, int value, size_t num);
 
 char *open_file(char *file);
 
-void free_table(void **table);
-void free_partial_table(void **table, int n);
+void free_table(void ***table);
+void free_partial_table(void ***table, int n);
 
 /* ============================================================
 ** CSV

@@ -26,7 +26,7 @@ char **copie_heads(dataframe_t *df)
     for (int i = 0; i < df->nb_columns; i++) {
         column_names[i] = strdup(df->column_names[i]);
         if (!column_names) {
-            free_partial_table((void **)column_names, i);
+            free_partial_table((void ***)&column_names, i);
             return NULL;
         }
     }
@@ -86,7 +86,7 @@ void df_free(dataframe_t *dataframe)
     if (dataframe->column_types)
         free(dataframe->column_types);
     if (dataframe->column_names)
-        free_table((void **)dataframe->column_names);
+        free_table((void ***)&dataframe->column_names);
     if (dataframe->data)
         free_csv(dataframe->data);
     free(dataframe);

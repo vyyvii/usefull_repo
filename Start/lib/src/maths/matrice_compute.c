@@ -41,7 +41,7 @@ double **multiplies_two_matrices(double **A, double **B, int sizeA, int sizeB)
     for (int i = 0; i < sizeA; i++) {
         C[i] = malloc(sizeof(double) * sizeB);
         if (!C[i]) {
-            free_partial_table((void **)C, i);
+            free_partial_table((void ***)&C, i);
             return NULL;
         }
         for (int j = 0; j < sizeB; j++) {
@@ -77,7 +77,7 @@ double **add_two_matrices(double **A, double **B, int sizeA, int sizeB)
     for (int i = 0; i < sizeA; i++) {
         C[i] = malloc(sizeof(double) * sizeB);
         if (!C[i]) {
-            free_partial_table((void **)C, i);
+            free_partial_table((void ***)&C, i);
             return NULL;
         }
         for (int j = 0; j < sizeB; j++)
@@ -106,7 +106,7 @@ double **soustract_two_matrices(double **A, double **B, int sizeA, int sizeB)
     for (int i = 0; i < sizeA; i++) {
         C[i] = malloc(sizeof(double) * sizeB);
         if (!C[i]) {
-            free_partial_table((void **)C, i);
+            free_partial_table((void ***)&C, i);
             return NULL;
         }
         for (int j = 0; j < sizeB; j++)
@@ -135,7 +135,7 @@ double **divise_matrice_by_double(double **A, int sizeA, double divise_by)
     for (int i = 0; i < sizeA; i++) {
         B[i] = malloc(sizeof(double) * sizeA);
         if (!B[i]) {
-            free_partial_table((void **)B, i);
+            free_partial_table((void ***)&B, i);
             return NULL;
         }
         for (int j = 0; j < sizeA; j++)

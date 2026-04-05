@@ -70,7 +70,7 @@ static char ***line_runner(dataframe_t *df, char **file)
 static int extract_fail(int curr, char ***column_names)
 {
     if (curr > 0 && !(*column_names)[curr - 1]) {
-        free_partial_table((void **) *column_names, curr);
+        free_partial_table((void ***)column_names, curr);
         return FAILURE;
     }
     return SUCCESS;
@@ -171,14 +171,14 @@ dataframe_t *df_read_csv(const char *filename, const char *separator,
 
     if (!file || !file[0] || !df) {
         if (file)
-            free_table((void **)file);
+            free_table((void ***)&file);
         return NULL;
     }
     if (set_df(df, file, separator, no_head) == FAILURE) {
-        free_table((void **)file);
+        free_table((void ***)&file);
         free(df);
         return NULL;
     }
-    free_table((void **)file);
+    free_table((void ***)&file);
     return df;
 }

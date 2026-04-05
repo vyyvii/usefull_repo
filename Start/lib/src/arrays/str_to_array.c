@@ -22,7 +22,7 @@ static int valid_word(int i, char **array, char *str, int *cell)
     if (str[end] == NULL_BYTE || is_sep(str[end])) {
         array[*cell] = strslice(str, start, end);
         if (!array[*cell])
-            free_partial_table((void **)array, *cell);
+            free_partial_table((void ***)&array, *cell);
         (*cell)++;
     }
     i = end;

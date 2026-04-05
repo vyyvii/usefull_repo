@@ -15,15 +15,16 @@
  * @note Complexity: O(n)
  * @note Part of UtilsLib by Victor Defauchy.
  */
-void free_table(void **table)
+void free_table(void ***table)
 {
-    if (!table)
+    if (!table || !*table)
         return;
-    for (size_t i = 0; table[i]; i++) {
-        free(table[i]);
-        table[i] = NULL;
+    for (size_t i = 0; (*table)[i]; i++) {
+        free((*table)[i]);
+        (*table)[i] = NULL;
     }
-    free(table);
+    free(*table);
+    *table = NULL;
 }
 
 /**
@@ -34,13 +35,14 @@ void free_table(void **table)
  * @note Complexity: O(n)
  * @note Part of UtilsLib by Victor Defauchy.
  */
-void free_partial_table(void **table, int n)
+void free_partial_table(void ***table, int n)
 {
-    if (!table)
+    if (!table || !*table)
         return;
     for (int i = 0; i < n; i++) {
-        free(table[i]);
-        table[i] = NULL;
+        free((*table)[i]);
+        (*table)[i] = NULL;
     }
-    free(table);
+    free(*table);
+    *table = NULL;
 }

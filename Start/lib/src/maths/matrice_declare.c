@@ -27,7 +27,7 @@ double **dup_matrice(double **A, int size)
     for (int i = 0; i < size; i++) {
         matrice[i] = malloc(sizeof(double) * size);
         if (!matrice[i]) {
-            free_partial_table((void **)matrice, i);
+            free_partial_table((void ***)&matrice, i);
             return NULL;
         }
         for (int j = 0; j < size; j++)
@@ -58,7 +58,7 @@ double **construct_matrice(double *A, int sizeA)
     for (int i = 0; i < size; i++) {
         matrice[i] = malloc(sizeof(double) * size);
         if (!matrice[i]) {
-            free_partial_table((void **)matrice, i);
+            free_partial_table((void ***)&matrice, i);
             return NULL;
         }
         for (int j = 0; j < size; j++) {
@@ -87,7 +87,7 @@ double **identity_matrice(int size)
     for (int i = 0; i < size; i++) {
         matrice[i] = malloc(sizeof(double) * size);
         if (!matrice[i]) {
-            free_partial_table((void **)matrice, i);
+            free_partial_table((void ***)&matrice, i);
             return NULL;
         }
         for (int j = 0; j < size; j++)
