@@ -20,7 +20,8 @@ The goal is simple: **start a new project in seconds with a clean structure, wor
 * Support for **unit tests (Criterion)**
 * Functional test runner
 * Coverage generation
-* Docker execution environment for **epitest**
+* Docker execution environment for **epitest*
+* Debug and release build modes
 
 ---
 
@@ -218,6 +219,23 @@ Rebuild everything:
 ```
 make re
 ```
+
+Build with debug:
+
+```
+make debug
+```
+> [!NOTE]
+> → Compiles project and library with:
+>
+> -g3
+> -O0
+>
+> Useful for:
+>
+> debugging
+> gdb
+> memory analysis
 
 Clean objects:
 
