@@ -21,19 +21,19 @@ int get_precision(char *number)
     int precision = 0;
 
     if (!number || !is_digit(number[0]))
-        return -1;
+        return -OK;
     if (!contains_char(number, '.'))
-        return 0;
+        return SUCCESS;
     while (number[i] && number[i] != '.')
         i++;
     i++;
     if (!is_digit(number[i]))
-        return -1;
+        return -OK;
     while (number[i]) {
         if (is_digit(number[i]))
             precision++;
         else
-            return -1;
+            return -OK;
         i++;
     }
     return precision;

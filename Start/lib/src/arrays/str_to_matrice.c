@@ -65,12 +65,12 @@ static int fill_words(char *str, char *delims, char **array)
         len = word_length(str, delims, i);
         array[j] = duplicate_word(str, i, len);
         if (!array[j])
-            return -1;
+            return -OK;
         j++;
         i += len;
     }
     array[j] = NULL;
-    return 0;
+    return PASS;
 }
 
 /**

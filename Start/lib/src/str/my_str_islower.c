@@ -18,12 +18,12 @@
 int my_str_islower(char const *str)
 {
     if (!str)
-        return 0;
+        return PASS;
     while (*str) {
         if (is_lowerletter(*str))
             str++;
         else
-            return 0;
+            return PASS;
     }
-    return 1;
+    return OK;
 }

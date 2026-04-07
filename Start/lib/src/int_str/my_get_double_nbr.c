@@ -11,19 +11,19 @@ static int go_in_number(double *result, const char *str, int i)
 {
     double factor = 0.1;
 
-    while (str[i] >= '0' && str[i] <= '9') {
+    while (is_digit(str[i])) {
         *result = *result * 10 + (str[i] - '0');
         i++;
     }
     if (str[i] == '.') {
         i++;
-        while (str[i] >= '0' && str[i] <= '9') {
+        while (is_digit(str[i])) {
             *result += (str[i] - '0') * factor;
             factor *= 0.1;
             i++;
         }
     }
-    return 1;
+    return OK;
 }
 
 /**
@@ -42,7 +42,7 @@ double my_get_double_nbr(char const *str)
     double result = 0.0;
 
     if (!str)
-        return 0.0;
+        return PASS_FLT;
     while (str[i] == ' ' || str[i] == '\t')
         i++;
     if (str[i] == '+' || str[i] == '-') {
@@ -50,9 +50,9 @@ double my_get_double_nbr(char const *str)
             sign = -1;
         i++;
     }
-    if (str[i] < '0' || str[i] > '9')
-        return 0.0;
+    if (!is_digit(str[i]))
+        return PASS_FLT;
     if (!go_in_number(&result, str, i))
-        return 0.0;
+        return PASS_FLT;
     return result * sign;
 }

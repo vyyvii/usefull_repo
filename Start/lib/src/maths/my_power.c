@@ -20,8 +20,8 @@
 double my_power_double(double nb, int p)
 {
     if (p == 0)
-        return 1;
+        return OK;
     else if (p < 0)
-        return 0;
+        return PASS;
     return my_power_double(nb, p - 1) * nb;
 }

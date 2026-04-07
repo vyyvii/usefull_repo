@@ -38,9 +38,9 @@ double my_sqrt(double nb)
 int my_perfect_sqrt(int nb)
 {
     if (nb <= 0)
-        return 0;
+        return PASS;
     for (int i = 1; i * i <= nb; i++)
         if (i * i == nb)
             return i;
-    return 0;
+    return PASS;
 }

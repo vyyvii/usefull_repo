@@ -9,15 +9,15 @@
 
 static int go_in_number(long long *result, const char *str, int i, int sign)
 {
-    while (str[i] >= '0' && str[i] <= '9') {
+    while (is_digit(str[i])) {
         *result = *result * 10 + (str[i] - '0');
         i++;
         if (sign == 1 && *result > INT_MAX)
-            return 0;
+            return PASS;
         if (sign == -1 && *result > (long)INT_MAX + 1)
-            return 0;
+            return PASS;
     }
-    return 1;
+    return OK;
 }
 
 /**
@@ -36,7 +36,7 @@ long long my_get_longlong_nbr(char const *str)
     long long result = 0;
 
     if (!str)
-        return 0;
+        return PASS;
     while (str[i] == ' ' || str[i] == '\t')
         i++;
     if (str[i] == '+' || str[i] == '-') {
@@ -44,9 +44,9 @@ long long my_get_longlong_nbr(char const *str)
             sign = -1;
         i++;
     }
-    if (str[i] < '0' || str[i] > '9')
-        return 0;
+    if (!is_digit(str[i]))
+        return PASS;
     if (!go_in_number(&result, str, i, sign))
-        return 0;
+        return PASS;
     return (long long)(result * sign);
 }

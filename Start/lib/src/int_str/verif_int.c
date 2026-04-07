@@ -28,7 +28,7 @@ int verif_int(char *number, int *result)
     if (number[0] == '-')
         start = 1;
     for (int i = start; i < len_number; i++) {
-        if ((number[i] < 48 || number[i] > 57))
+        if (!is_digit(number[i]))
             return FAILURE;
     }
     *result = my_getnbr(number);

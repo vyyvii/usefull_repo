@@ -33,6 +33,8 @@
 #ifndef UTILSLIB
     #define UTILSLIB
     #define SUCCESS 0
+    #define PASS 0
+    #define PASS_FLT 0.0
     #define OK 1
     #define FAILURE 84
     #define CHUNK 128
@@ -99,6 +101,7 @@ int is_digit(char c);
 int is_letter(char c);
 int is_lowerletter(char c);
 int is_upperletter(char c);
+int is_sep(char c);
 void my_putchar(char c);
 void my_putchar_error(char c);
 
@@ -199,7 +202,7 @@ char *take_user_input(void);
 char **str_to_array(char *str);
 
 /* ============================================================
-** matrice
+** MATRICE
 ** ============================================================ */
 
 char **uniq_words(char *str);

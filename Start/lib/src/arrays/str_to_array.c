@@ -7,11 +7,6 @@
 
 #include "utilslib.h"
 
-static int is_sep(char c)
-{
-    return (c == ' ' || c == '\t');
-}
-
 static int valid_word(int i, char **array, char *str, int *cell)
 {
     int start = i;

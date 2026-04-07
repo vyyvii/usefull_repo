@@ -13,9 +13,9 @@ static int detect_point_minus(char *number, int *i, int *is_point)
         && is_digit(number[*i - 1]) && is_digit(number[*i + 1])) {
         (*i)++;
         *is_point = 1;
-        return 1;
+        return OK;
     }
-    return 0;
+    return PASS;
 }
 
 /**
@@ -40,7 +40,7 @@ int verif_double(char *number, double *result)
     if (number[0] == '-' && len_nb > 1)
         i = 1;
     while (number[i]) {
-        if (number[i] >= '0' && number[i] <= '9') {
+        if (is_digit(number[i])) {
             i++;
             continue;
         }

@@ -20,7 +20,7 @@ int my_str_isnum(char const *str)
     int is_minus = 0;
 
     if (!str)
-        return 0;
+        return PASS;
     while (*str) {
         if (is_digit(*str)) {
             str++;
@@ -31,7 +31,7 @@ int my_str_isnum(char const *str)
             is_minus = 1;
             continue;
         }
-        return 0;
+        return PASS;
     }
-    return 1;
+    return OK;
 }

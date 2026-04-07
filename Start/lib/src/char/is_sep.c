@@ -9,13 +9,13 @@
 
 /**
  * @ingroup char
- * @brief Tests if a character is a digit ('0'..'9').
+ * @brief Tests if a character is a common separator (space or tab).
  * @param c Character to test.
- * @return 1 if digit, 0 otherwise.
+ * @return 1 if separator, 0 otherwise.
  * @note Complexity: O(1)
  * @note Part of UtilsLib by Victor Defauchy.
  */
-int is_digit(char c)
+int is_sep(char c)
 {
-    return c >= '0' && c <= '9' ? OK : PASS;
+    return (c == ' ' || c == '\t') ? OK : PASS;
 }
