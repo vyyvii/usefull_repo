@@ -20,9 +20,9 @@ char *my_strstr(char *str, char const *to_find)
 {
     int needle_len = my_strlen(to_find);
 
-    if (needle_len == 0 || !str || !to_find)
+    if (!needle_len || !str || !to_find)
         return str;
-    while (*str && my_strncmp(str, to_find, needle_len) != 0)
+    while (*str && my_strncmp(str, to_find, needle_len))
         str++;
     if (*str)
         return str;

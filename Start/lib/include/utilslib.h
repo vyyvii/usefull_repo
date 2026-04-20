@@ -201,6 +201,9 @@ void putcat(char *txt1, char *txt2);
 char *take_user_input(void);
 char **str_to_array(char *str);
 
+char to_hex(unsigned char b);
+void print_bytes(unsigned char b);
+
 /* ============================================================
 ** MATRICE
 ** ============================================================ */

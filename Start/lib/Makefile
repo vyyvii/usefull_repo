@@ -80,7 +80,8 @@ SRC_STR		 =	src/str/count_contains_char.c \
 				src/str/my_strstr.c \
 				src/str/my_strupcase.c \
 				src/str/my_strlowcase.c \
-				src/str/take_user_input.c
+				src/str/take_user_input.c \
+				src/str/print_bytes.c
 SRC_BOOL	 =	src/bool/get_bool.c
 SRC_CSV		 =	src/csv/helpers.c \
 				src/csv/read_csv.c \
