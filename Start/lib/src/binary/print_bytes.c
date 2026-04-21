@@ -30,8 +30,8 @@ void print_bytes(unsigned char b)
 {
     char hex[3];
 
-    hex[0] = to_hex(b & 0xF0);
-    hex[1] = to_hex(b & 0x0F);
+    hex[0] = to_hex((b >> 4) & 0xF);
+    hex[1] = to_hex(b & 0xF);
     hex[2] = NULL_BYTE;
     my_putstr(hex);
     my_putchar(' ');
